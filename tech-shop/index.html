@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Vortex Gear // Next-Gen Smartphone Accessories</title>
+  <meta name="description" content="Discover Vortex Gear—military grade smartphone cases, GaN fast chargers, and screen protectors. Configure your holographic armor shield online.">
+  <meta name="keywords" content="phone case, magnetic case, GaN charger, custom phone case, screen protector, mobile accessories, premium tech">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/phone_hero.png">
+  
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="nav-container">
+        <a href="#home" class="logo">
+          VORTEX<span>GEAR</span>
+        </a>
+        
+        <nav class="nav-menu" id="navMenu">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#features" class="nav-link">Specs</a>
+          <a href="#customizer" class="nav-link">Studio</a>
+          <a href="#catalog" class="nav-link">Catalog</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </nav>
+        
+        <div class="nav-actions">
+          <button class="cart-icon-btn" id="cartIconBtn" aria-label="Open Shopping Bag">
+            <i data-lucide="shopping-bag" style="width: 1.15rem;"></i>
+            <span class="cart-badge" id="cartBadgeCount">0</span>
+          </button>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION (Cosmic Space Focus)
+       ========================================== -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="mono-tag"><i data-lucide="shield-alert"></i> VORTEX LABS // SYS_ACTIVE</span>
+          <h1 class="hero-title" style="margin-top: 1rem;">
+            NEXT-GEN DEFENSE.<br>
+            <span class="gradient-text">LIGHTYEAR AHEAD.</span>
+          </h1>
+          <p class="hero-desc">
+            Engineered with high-impact composite carbon layers and magnetic Qi2 alignments. Deflect drops, preserve slim contours, and peak your charging speeds.
+          </p>
+          <div class="hero-buttons">
+            <a href="#customizer" class="btn btn-primary">Configure Studio</a>
+            <a href="#catalog" class="btn btn-secondary">Explore Catalog</a>
+          </div>
+          
+          <div class="hero-specs-list">
+            <div class="hero-spec-item">
+              <h5>Boundary</h5>
+              <p>1.2mm Slim</p>
+            </div>
+            <div class="hero-spec-item">
+              <h5>Impact Rating</h5>
+              <p>15ft Drop Test</p>
+            </div>
+            <div class="hero-spec-item">
+              <h5>Mag-Alignment</h5>
+              <p>Qi2 Certified</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="hero-img-box">
+            <img src="assets/images/phone_hero.png" alt="Electric blue phone case" class="hero-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SPECIFICATIONS SECTION (Cosmic Cards)
+       ========================================== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Engineering</span>
+        <h2 class="section-title">BUILT FOR EXTREMES</h2>
+        <p class="section-description">
+          We combine lightweight aerospace composites with shock-absorbing TPU frames to guarantee extreme durability.
+        </p>
+      </div>
+      
+      <div class="features-container">
+        <!-- Feature 1 -->
+        <div class="feature-block">
+          <div class="feature-icon-box">
+            <i data-lucide="shield"></i>
+          </div>
+          <h4>Double Armor Deflection</h4>
+          <p>Layered with air-pocket buffers at each corner, successfully absorbing drop impacts from high heights safely.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-block">
+          <div class="feature-icon-box">
+            <i data-lucide="zap"></i>
+          </div>
+          <h4>Integrated Magnet Ring</h4>
+          <p>Embeds 36 high-induction magnets for instant wireless alignments and secure mag-click accessories.</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-block">
+          <div class="feature-icon-box">
+            <i data-lucide="droplet"></i>
+          </div>
+          <h4>Hydrophobic Coat</h4>
+          <p>Finished with a hydrophobic layer that repels greasy smudges and stops UV discoloration over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE STUDIO CUSTOMIZER (Terminal / Radar style)
+       ========================================== -->
+  <section class="section section-alt" id="customizer">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Design Studio</span>
+        <h2 class="section-title">SIMULATE YOUR SHIELD</h2>
+        <p class="section-description">
+          Simulate blueprint designs: define device dimensions, casing styles, and glow- bumper accents.
+        </p>
+      </div>
+      
+      <div class="customizer-box">
+        <!-- Center phone preview canvas -->
+        <div class="customizer-preview">
+          <div class="phone-wireframe" id="phoneWireframe">
+            <div class="phone-screen"></div>
+            
+            <!-- Dynamic case wrapper skin -->
+            <div class="phone-case-wrapper carbon-texture" id="phoneCaseWrapper">
+              <div class="case-magsafe-ring"></div>
+            </div>
+            
+            <div class="phone-camera-module">
+              <div class="camera-lens"></div>
+              <div class="camera-lens"></div>
+              <div class="camera-lens"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right segmented options panel -->
+        <div class="customizer-controls">
+          <h3>CHOOSE PROPERTIES</h3>
+          <p>Adjust variables to configure structural shield frames and calculate pricing.</p>
+          
+          <div class="control-steps">
+            <!-- Step 1: Model -->
+            <div class="step-block model-step">
+              <div class="step-label"><h5>1. Select Device Size</h5></div>
+              <div class="options-row">
+                <span class="option-badge active" data-value="iPhone 15 Pro">iPhone 15 Pro</span>
+                <span class="option-badge" data-value="Galaxy S24 Ultra">Galaxy S24 Ultra</span>
+              </div>
+            </div>
+            
+            <!-- Step 2: Casing material -->
+            <div class="step-block type-step">
+              <div class="step-label"><h5>2. Case Casing Style</h5></div>
+              <div class="options-row">
+                <span class="option-badge active" data-value="carbon">Brushed Carbon</span>
+                <span class="option-badge" data-value="clear">Crystal Clear</span>
+                <span class="option-badge" data-value="leather">Premium Leather</span>
+              </div>
+            </div>
+            
+            <!-- Step 3: Color Bumper Swatches -->
+            <div class="step-block color-step">
+              <div class="step-label"><h5>3. Bumper Accent Color</h5></div>
+              <div class="color-swatch-row">
+                <!-- Cyber Cyan -->
+                <div class="color-swatch active" data-name="Cyber Cyan" data-hex="#00F0FF">
+                  <div class="color-dot-indicator" style="background-color: #00F0FF;"></div>
+                </div>
+                <!-- Neon Violet -->
+                <div class="color-swatch" data-name="Neon Violet" data-hex="#A855F7">
+                  <div class="color-dot-indicator" style="background-color: #A855F7;"></div>
+                </div>
+                <!-- Cyber Emerald -->
+                <div class="color-swatch" data-name="Cyber Emerald" data-hex="#10B981">
+                  <div class="color-dot-indicator" style="background-color: #10B981;"></div>
+                </div>
+                <!-- Liquid Gold -->
+                <div class="color-swatch" data-name="Liquid Gold" data-hex="#F59E0B">
+                  <div class="color-dot-indicator" style="background-color: #F59E0B;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bottom pricing and checkout -->
+          <div class="customizer-price-bar">
+            <div>
+              <h4 id="customizerPrice">$0.00</h4>
+              <span style="font-size: 0.75rem; color: var(--text-secondary);">Configured Shield Total</span>
+            </div>
+            <button class="btn btn-primary" id="customizerAddToCartBtn">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PRODUCT CATALOG SECTION
+       ========================================== -->
+  <section class="section" id="catalog">
+    <div class="container">
+      <div class="section-header" style="text-align: left; margin-left: 0; max-width: 100%; display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px solid var(--border-color); padding-bottom: 2rem;">
+        <div>
+          <span class="section-tag" style="display: block; margin-bottom: 0.5rem;">Collection</span>
+          <h2 class="section-title" style="margin-bottom: 0;">Which gear is right for you?</h2>
+        </div>
+        <div class="catalog-tabs">
+          <button class="tab-btn active" data-category="all">All Gear</button>
+          <button class="tab-btn" data-category="cases">Cases</button>
+          <button class="tab-btn" data-category="chargers">Power</button>
+        </div>
+      </div>
+      
+      <!-- Catalog Grid -->
+      <div class="catalog-grid" id="catalogGrid" style="margin-top: 4rem;">
+        <!-- Rendered dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TECHNICAL FAQ SECTION
+       ========================================== -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">SUPPORT & COMPATIBILITY</h2>
+        <p class="section-description">
+          Find answers about delivery, device compatibility, and warranty policies.
+        </p>
+      </div>
+      
+      <div class="faq-grid">
+        <!-- FAQ 1 -->
+        <div class="faq-card">
+          <div class="faq-question">
+            <span>Do these cases support Qi2 and MagSafe wireless charging?</span>
+            <i data-lucide="plus" style="width: 1.15rem; height: 1.15rem;"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. Every case is fitted with N52 neodymium magnetic alignment rings. They snap automatically to Apple MagSafe stands, magnetic wallet sleeves, and Qi2 wireless chargers at maximum rates.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ 2 -->
+        <div class="faq-card">
+          <div class="faq-question">
+            <span>What materials are integrated inside the Carbon cases?</span>
+            <i data-lucide="plus" style="width: 1.15rem; height: 1.15rem;"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We combine aerospace-grade real carbon-fiber weaves with high-impact TPU internal linings. This dual-layered composition deflects impacts from drop heights while cushioning the back glass of the phone.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ 3 -->
+        <div class="faq-card">
+          <div class="faq-question">
+            <span>How fast is order processing and standard shipment?</span>
+            <i data-lucide="plus" style="width: 1.15rem; height: 1.15rem;"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Orders are processed and packed within 24 hours. Transit speeds take 2-4 business days for domestic regions, and 5-9 days for international shipments. Tracking links are emailed immediately upon courier collection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1 -->
+        <div class="footer-col">
+          <a href="#home" class="logo" style="color: #FFFFFF; margin-bottom: 1.5rem;">
+            VORTEX<span>GEAR</span>
+          </a>
+          <p class="footer-desc">
+            Aerospace grade device protection, premium MagSafe accessories, and GaN multi-port fast charging bricks built for modern lifestyles.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+        
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4>SHIELD PRODUCTS</h4>
+          <ul class="footer-links">
+            <li><a href="#catalog">iPhone cases</a></li>
+            <li><a href="#catalog">Galaxy cases</a></li>
+            <li><a href="#catalog">GaN power bricks</a></li>
+            <li><a href="#catalog">Tempered glass</a></li>
+          </ul>
+        </div>
+        
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h4>SUPPORT CORE</h4>
+          <ul class="footer-links">
+            <li><a href="#faq">Shipping & Logistics</a></li>
+            <li><a href="#faq">Returns & Exchange</a></li>
+            <li><a href="#faq">Warranty Claims</a></li>
+            <li><a href="#faq">Device Fit Guides</a></li>
+          </ul>
+        </div>
+        
+        <!-- Col 4 -->
+        <div class="footer-col">
+          <h4>SUBSCRIBE // DISPATCH</h4>
+          <p class="footer-desc">
+            Sign up to receive catalog releases, device compatibility news, and member event invitations.
+          </p>
+          <form id="newsletterForm">
+            <div class="newsletter-box">
+              <input type="email" placeholder="Email Address..." required>
+              <button type="submit" aria-label="Subscribe Email"><i data-lucide="arrow-right"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vortex Gear Inc. All rights reserved. Designed for professional tech merchandise.</p>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: #86868B;">PRIVACY POLICY</a>
+          <a href="#" style="color: #86868B;">TERMS OF SERVICE</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       CART SIDEBAR DRAWER (Cosmic Glass Style)
+       ========================================== -->
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <h3>Shopping Bag</h3>
+        <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close Bag">&times;</button>
+      </div>
+      
+      <!-- Cart items list wrapper -->
+      <div class="cart-items-wrapper" id="cartItemsWrapper">
+        <!-- Rendered dynamically via JS -->
+      </div>
+      
+      <!-- Cart summary footer -->
+      <div class="cart-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Shipping charge</span>
+          <span id="cartDelivery">$0.00</span>
+        </div>
+        <div class="cart-summary-row total">
+          <span>Total Price</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+        <button class="btn btn-primary" id="checkoutBtn" style="width: 100%;">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Success Toast Notifications -->
+  <div class="success-toast" id="successToast">
+    <div class="toast-icon">
+      <i data-lucide="check-circle-2"></i>
+    </div>
+    <div class="toast-text">
+      <h5>Success!</h5>
+      <p>Boutique action completed.</p>
+    </div>
+  </div>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- JavaScript Logic -->
+  <script src="js/main.js"></script>
+</body>
+</html>
