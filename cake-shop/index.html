@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>L'Amour Du Sucre | Artisanal Cakes & Pastry Boutique</title>
+  <meta name="description" content="Discover L'Amour Du Sucre—a premium boutique bakery crafting custom wedding cakes, organic pastries, and artisanal cupcakes. Design your dream cake online.">
+  <meta name="keywords" content="bakery, cake shop, custom cakes, wedding cakes, pastries, macarons, cupcakes, sweet boutique">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/cake_chocolate.png">
+  
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="nav-container">
+        <a href="#home" class="logo">
+          L'Amour<span>du Sucre</span>
+        </a>
+        
+        <nav class="nav-menu" id="navMenu">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#story" class="nav-link">Our Story</a>
+          <a href="#builder" class="nav-link">Cake Builder</a>
+          <a href="#menu" class="nav-link">Boutique Menu</a>
+          <a href="#process" class="nav-link">Crafting</a>
+          <a href="#reviews" class="nav-link">Reviews</a>
+          <a href="#consultation" class="nav-link">Consultation</a>
+        </nav>
+        
+        <div class="nav-actions">
+          <a href="#menu" class="btn btn-secondary btn-sm" style="padding: 0.65rem 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i data-lucide="shopping-bag" style="width: 1.1rem;"></i>
+            <span>Tasting Box</span>
+          </a>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION (Split screen layout)
+       ========================================== -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-tag">Welcome to Sweet Elegance</span>
+          <h1 class="hero-title">
+            ARTISANAL CAKES<br>
+            CRAFTED FOR YOUR<br>
+            <span class="gold-text italic-text">sweet moments</span>
+          </h1>
+          <p class="hero-desc">
+            Each pastry is an edit of organic baking science and fine design—lovingly crafted with Madagascar vanilla, dark cocoa blends, and hand-gilded details.
+          </p>
+          <div class="hero-buttons">
+            <a href="#builder" class="btn btn-primary">Custom Builder</a>
+            <a href="#menu" class="btn btn-secondary">Explore Menu</a>
+          </div>
+        </div>
+        
+        <div class="hero-image-wrapper">
+          <div class="hero-image-frame">
+            <img src="assets/images/cake_hero.png" alt="Elegant wedding cake with flowers" class="hero-img">
+          </div>
+          <div class="hero-frame-bg"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       STORY SECTION (Asymmetric Collage Layout)
+       ========================================== -->
+  <section class="section" id="story" style="border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="story-split">
+        <!-- Left Image Collage -->
+        <div class="story-img-collage">
+          <img src="assets/images/cake_chocolate.png" alt="Decadent chocolate cake" class="collage-img-main">
+          <img src="assets/images/cake_cupcake.png" alt="Assorted cupcakes" class="collage-img-sub">
+        </div>
+        
+        <!-- Right Description -->
+        <div class="story-content">
+          <span class="section-subtitle">Since 2012</span>
+          <h3>THE ART OF ARTISANAL CONFECTION</h3>
+          <p>
+            At L'Amour du Sucre, we believe that celebration centerpieces should taste as stunning as they look. We started as a small kitchen studio, and have evolved into the city's premier pastry boutique.
+          </p>
+          <p style="color: var(--text-muted); margin-bottom: 2.5rem;">
+            We use only farm-fresh organic eggs, imported Belgian chocolate, organic cold-pressed lavender oils, and local berries. We bake everything slowly, in small batches, to guarantee moist layers and rich flavor finishes.
+          </p>
+          <a href="#consultation" class="btn btn-secondary">Book a Private Tasting</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       INTERACTIVE CAKE BUILDER WIDGET
+       ========================================== -->
+  <section class="section" id="builder" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Design Your Treat</span>
+        <h2 class="section-title">THE ARTISANAL CAKE BUILDER</h2>
+        <p class="section-description">
+          Select layers, cake flavors, frosting finishes, and custom toppings to preview your sweet creations and calculate instant pricing.
+        </p>
+      </div>
+      
+      <div class="builder-wrapper">
+        <!-- Left Visual Live Canvas -->
+        <div class="builder-preview-box">
+          <!-- Dynamic Topping emoji/graphic -->
+          <div class="cake-topping-graphic" id="cakeToppingGraphic">🍓🍒🍓</div>
+          
+          <!-- Cake Stack Layers -->
+          <div class="cake-layers-container" id="cakeLayersContainer">
+            <!-- Layers render dynamically in JS -->
+          </div>
+          
+          <!-- Pedestal Stand -->
+          <div class="stand-illustration"></div>
+        </div>
+        
+        <!-- Right Stepper Selection Panel -->
+        <div class="builder-controls">
+          <h3>BUILD YOUR CONFIGURATION</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">
+            Click options below to customize your cake layers. All custom orders include a complimentary message plaque.
+          </p>
+          
+          <div class="builder-steps">
+            <!-- Step 1: Flavor -->
+            <div class="step-block flavor-step">
+              <h5>1. Choose Sponge Flavor</h5>
+              <div class="option-grid">
+                <div class="option-card active" data-value="chocolate">Chocolate</div>
+                <div class="option-card" data-value="vanilla">Vanilla Bean</div>
+                <div class="option-card" data-value="redvelvet">Red Velvet</div>
+                <div class="option-card" data-value="pistachio">Pistachio</div>
+              </div>
+            </div>
+            
+            <!-- Step 2: Tiers -->
+            <div class="step-block tiers-step">
+              <h5>2. Select Cake Tiers</h5>
+              <div class="option-grid">
+                <div class="option-card" data-value="1">1 Tier</div>
+                <div class="option-card active" data-value="2">2 Tiers</div>
+                <div class="option-card" data-value="3">3 Tiers</div>
+              </div>
+            </div>
+            
+            <!-- Step 3: Frosting Style -->
+            <div class="step-block frosting-step">
+              <h5>3. Frosting Style</h5>
+              <div class="option-grid">
+                <div class="option-card active" data-value="buttercream">Buttercream</div>
+                <div class="option-card" data-value="fondant">Fondant</div>
+                <div class="option-card" data-value="naked">Naked Cake</div>
+              </div>
+            </div>
+            
+            <!-- Step 4: Toppings -->
+            <div class="step-block toppings-step">
+              <h5>4. Fine Topping Decors</h5>
+              <div class="option-grid">
+                <div class="option-card active" data-value="berries">Berries Mix</div>
+                <div class="option-card" data-value="gold">Gold Flakes</div>
+                <div class="option-card" data-value="flowers">Sugar Flowers</div>
+                <div class="option-card" data-value="none">None</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pricing & Checkout Actions -->
+          <div class="builder-price-bar">
+            <div class="price-display">
+              <h4 id="builderPrice">$0</h4>
+              <span>Estimated Base Price</span>
+            </div>
+            <button class="btn btn-primary" id="builderAddToCartBtn">Add to Box</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       DYNAMIC MENU SECTION
+       ========================================== -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Freshly Baked Daily</span>
+        <h2 class="section-title">THE SWEET SELECTION MENU</h2>
+        <p class="section-description">
+          Explore our seasonal specialties. Add items directly to your custom Tasting Box for collection or weekend home delivery.
+        </p>
+      </div>
+      
+      <!-- Filter Categories -->
+      <div class="menu-tabs">
+        <button class="tab-btn active" data-category="signature">Signature Cakes</button>
+        <button class="tab-btn" data-category="cupcake">Cupcakes & Macarons</button>
+        <button class="tab-btn" data-category="pastry">Boutique Pastries</button>
+      </div>
+      
+      <!-- Menu Cards Grid -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- Rendered dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE CRAFT PROCESS TIMELINE
+       ========================================== -->
+  <section class="section" id="process" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Our Artistry</span>
+        <h2 class="section-title">THE PATH TO PERFECTION</h2>
+        <p class="section-description">
+          Crafting custom cakes requires patience, precision, and artistry. Here is how your dream centerpiece comes to life.
+        </p>
+      </div>
+      
+      <div class="process-timeline">
+        <!-- Step 1 -->
+        <div class="process-step">
+          <div class="step-number-circle">I</div>
+          <h4>Consultation</h4>
+          <p>We sketch your concepts, match color swatches, and choose custom flavor profiles during tasting.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="process-step">
+          <div class="step-number-circle">II</div>
+          <h4>Sourcing</h4>
+          <p>We gather farm-fresh organic ingredients, fresh flowers, and premium dark cocoa butter.</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="process-step">
+          <div class="step-number-circle">III</div>
+          <h4>Slow Baking</h4>
+          <p>Layers are baked slowly in micro-batches to guarantee high moisture retention and texture structure.</p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="process-step">
+          <div class="step-number-circle">IV</div>
+          <h4>Hand Gilding</h4>
+          <p>Our head pastry chef completes icing, piping, sugar modeling, and applies real edible 24k gold leaf.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TESTIMONIALS CAROUSEL
+       ========================================== -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Shared Happiness</span>
+        <h2 class="section-title">MEMORABLE CELEBRATIONS</h2>
+        <p class="section-description">
+          We are honored to have played a sweet role in our clients' most beloved wedding days, birthdays, and anniversaries.
+        </p>
+      </div>
+      
+      <div class="testimonials-slider">
+        <div class="testimonials-track-container">
+          <div class="testimonials-track" id="testimonialsTrack">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <div class="testimonial-card">
+                <span class="quote-mark">“</span>
+                <p class="testimonial-quote">
+                  "The lemon elderflower wedding cake was absolute perfection! It was an breathtaking masterpiece and the talk of the evening. It tasted so light, moist, and perfectly balanced. L'Amour du Sucre made our wedding magical."
+                </p>
+                <img src="assets/images/cake_hero.png" alt="Emily & James" class="client-profile-img">
+                <h4 class="client-name">Emily & James Thornton</h4>
+                <p class="client-date">Wedding Day - June 2026</p>
+              </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide">
+              <div class="testimonial-card">
+                <span class="quote-mark">“</span>
+                <p class="testimonial-quote">
+                  "I ordered the chocolate raspberry drip cake for my daughter's graduation. Not only was it visually stunning, but the crumb structure was incredibly rich. The berries were fresh and glossy. Highly recommend L'Amour!"
+                </p>
+                <img src="assets/images/cake_chocolate.png" alt="Catherine L." class="client-profile-img">
+                <h4 class="client-name">Catherine Laurent</h4>
+                <p class="client-date">Birthday Event - May 2026</p>
+              </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide">
+              <div class="testimonial-card">
+                <span class="quote-mark">“</span>
+                <p class="testimonial-quote">
+                  "Their online builder made it so easy to customize layers! I ordered red velvet cupcakes and a small 2-tier naked cake for a baby shower. Everything was ready on time and guests were amazed by the design details."
+                </p>
+                <img src="assets/images/cake_cupcake.png" alt="Jessica P." class="client-profile-img">
+                <h4 class="client-name">Jessica Parker</h4>
+                <p class="client-date">Baby Shower - April 2026</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="slider-nav">
+          <button class="slider-btn" id="prevTestimonial" aria-label="Previous Slide">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button class="slider-btn" id="nextTestimonial" aria-label="Next Slide">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       EVENT CONSULTATION (Fashion Underline inputs)
+       ========================================== -->
+  <section class="section" id="consultation" style="border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="consult-wrapper">
+        <!-- Left Details -->
+        <div class="consult-visual">
+          <span class="section-subtitle">Custom Commissions</span>
+          <h3>INQUIRE FOR A PRIVATE TASTING BOX</h3>
+          <p>
+            Planning a wedding or large corporate event? Let us craft a bespoke centerpiece tailored to your theme, colors, and flavor selections.
+          </p>
+          
+          <div class="consult-card-gold">
+            <h4>Tasting Box Inclusions:</h4>
+            <ul>
+              <li><i data-lucide="sparkles"></i> 4 mini-cake sponge slices</li>
+              <li><i data-lucide="sparkles"></i> 6 seasonal frosting samples</li>
+              <li><i data-lucide="sparkles"></i> 1-on-1 virtual design consultation</li>
+              <li><i data-lucide="sparkles"></i> Custom sketch concept mapping</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Right Form -->
+        <form class="consult-form" id="consultForm">
+          <div class="form-group-line">
+            <input type="text" id="clientName" class="form-control-line" placeholder=" " required>
+            <label for="clientName" class="form-label-line">Your Full Name</label>
+          </div>
+          
+          <div class="form-group-line">
+            <input type="email" id="clientEmail" class="form-control-line" placeholder=" " required>
+            <label for="clientEmail" class="form-label-line">Email Address</label>
+          </div>
+          
+          <div class="form-group-line">
+            <input type="text" id="eventDate" class="form-control-line" placeholder=" " onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
+            <label for="eventDate" class="form-label-line">Target Event Date</label>
+          </div>
+          
+          <div class="form-group-line">
+            <input type="number" id="guestCount" class="form-control-line" placeholder=" ">
+            <label for="guestCount" class="form-label-line">Estimated Guests</label>
+          </div>
+          
+          <div class="form-group-line">
+            <input type="text" id="eventNotes" class="form-control-line" placeholder=" ">
+            <label for="eventNotes" class="form-label-line">Share details (Wedding theme, dietary needs...)</label>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">
+            Request Tasting
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1 -->
+        <div class="footer-col">
+          <a href="#home" class="logo" style="display: block; margin-bottom: 1.5rem;">
+            L'Amour<span>du Sucre</span>
+          </a>
+          <p class="footer-desc">
+            Premium artisanal cake boutique crafting memorable centerpieces, French pastries, and custom-styled event bakes daily.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Pinterest"><i data-lucide="pinterest"></i></a>
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          </div>
+        </div>
+        
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#builder">Cake Builder</a></li>
+            <li><a href="#menu">Pastry Menu</a></li>
+          </ul>
+        </div>
+        
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h4>BOUTIQUE</h4>
+          <ul class="footer-links">
+            <li><a href="#reviews">Testimonials</a></li>
+            <li><a href="#consultation">Tastings</a></li>
+            <li><a href="#home">Location & Hours</a></li>
+            <li><a href="#home">FAQs & Delivery</a></li>
+          </ul>
+        </div>
+        
+        <!-- Col 4 -->
+        <div class="footer-col">
+          <h4>SUBSCRIBE</h4>
+          <p class="footer-desc">
+            Sign up to receive sweet recipes, seasonal flavor catalogs, and event availability.
+          </p>
+          <form id="newsletterForm">
+            <div class="newsletter-box">
+              <input type="email" placeholder="Your email..." required>
+              <button type="submit" aria-label="Submit Email"><i data-lucide="arrow-right"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 L'Amour Du Sucre Inc. All rights reserved. Made for professional bakery business.</p>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: var(--text-muted);">Privacy</a>
+          <a href="#" style="color: var(--text-muted);">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dynamic Success Toast Popup -->
+  <div class="success-toast" id="successToast">
+    <div class="toast-icon">
+      <i data-lucide="check-circle"></i>
+    </div>
+    <div class="toast-text">
+      <h5>Success!</h5>
+      <p>Notification registered.</p>
+    </div>
+  </div>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- JavaScript Logic -->
+  <script src="js/main.js"></script>
+</body>
+</html>
