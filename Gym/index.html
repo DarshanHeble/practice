@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>AURA ATHLETICS | Premium Fitness & Performance Gym</title>
+  <meta name="description" content="Experience Aura Athletics—where state-of-the-art training facilities, elite certified coaching, and custom fitness programs unite to redefine your limits.">
+  <meta name="keywords" content="gym, premium fitness, personal trainers, bodybuilding, crossfit, yoga, HIIT, athletic performance">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/trainer_male.png">
+  
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER / NAVIGATION
+       ========================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="nav-container">
+        <a href="#home" class="logo">
+          AURA<span>.</span>
+        </a>
+        
+        <nav class="nav-menu" id="navMenu">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#programs" class="nav-link">Programs</a>
+          <a href="#schedule" class="nav-link">Schedule</a>
+          <a href="#trainers" class="nav-link">Coaches</a>
+          <a href="#bmi" class="nav-link">Calculator</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        
+        <div class="nav-actions">
+          <button class="btn btn-primary btn-sm open-join-modal-btn">Join Now</button>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          EVOLVE TO YOUR<br>
+          <span class="neon-text">PEAK PERFORMANCE</span>
+        </h1>
+        <p class="hero-description">
+          Experience Aura Athletics—where premium training equipment, elite certified coaching, and a driven community unite to unlock your true physical potential.
+        </p>
+        <div class="hero-cta">
+          <a href="#pricing" class="btn btn-primary">Get Started</a>
+          <a href="#programs" class="btn btn-secondary">Explore Programs</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>15K+</h3>
+            <p>Active Members</p>
+          </div>
+          <div class="stat-item">
+            <h3>50+</h3>
+            <p>Elite Coaches</p>
+          </div>
+          <div class="stat-item">
+            <h3>100+</h3>
+            <p>Weekly Classes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FEATURES / VALUE PROPOSITION
+       ========================================== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Why Choose Aura</span>
+        <h2 class="section-title">THE AURA ADVANTAGE</h2>
+        <p class="section-description">
+          We combine cutting-edge science, high-performance coaching, and luxury amenities to deliver an unmatched training ecosystem.
+        </p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="dumbbell"></i>
+          </div>
+          <h3 class="feature-title">Elite Training Gear</h3>
+          <p class="feature-desc">
+            Train with world-class strength platforms, biomechanically optimized weight stacks, and premium free-weight zones.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="user-check"></i>
+          </div>
+          <h3 class="feature-title">Expert Coaching</h3>
+          <p class="feature-desc">
+            Work 1-on-1 with elite strength coaches, sport nutritionists, and movement therapists focused entirely on your goals.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="calendar"></i>
+          </div>
+          <h3 class="feature-title">Dynamic Classes</h3>
+          <p class="feature-desc">
+            From high-intensity metabolic conditioning (HIIT) to athletic recovery yoga, choose from dozens of weekly classes.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <h3 class="feature-title">Luxury Recovery</h3>
+          <p class="feature-desc">
+            Optimize your recovery and ease soreness with our infrared saunas, cryotherapy plunges, and sports massage therapists.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PROGRAMS / CLASSES
+       ========================================== -->
+  <section class="section" id="programs" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Our Specializations</span>
+        <h2 class="section-title">ENGINEERED PROGRAMS</h2>
+        <p class="section-description">
+          Whether you want to build raw strength, burn calories, or boost mobility, our structured programs are tailored to produce results.
+        </p>
+      </div>
+      
+      <div class="programs-grid">
+        <!-- Program 1 -->
+        <div class="program-card">
+          <div class="program-img-wrapper">
+            <img src="assets/images/hero_bg.png" alt="Strength & Conditioning" class="program-img" style="filter: brightness(0.6) contrast(1.1);">
+            <div class="program-badge">Strength</div>
+          </div>
+          <div class="program-content">
+            <div class="program-meta">
+              <span><i data-lucide="clock"></i> 60 Min</span>
+              <span><i data-lucide="zap"></i> Advanced</span>
+            </div>
+            <h3 class="program-title">Strength & conditioning</h3>
+            <p class="program-desc">
+              Master compound barbell movements, progressive hypertrophy plans, and athletic conditioning principles to build a resilient, strong physique.
+            </p>
+            <button class="btn-link open-join-modal-btn">Enquire Program <i data-lucide="arrow-right"></i></button>
+          </div>
+        </div>
+        
+        <!-- Program 2 -->
+        <div class="program-card">
+          <div class="program-img-wrapper">
+            <img src="assets/images/hero_bg.png" alt="HIIT & Cardio" class="program-img" style="filter: brightness(0.5) hue-rotate(60deg) contrast(1.1);">
+            <div class="program-badge">Cardio</div>
+          </div>
+          <div class="program-content">
+            <div class="program-meta">
+              <span><i data-lucide="clock"></i> 45 Min</span>
+              <span><i data-lucide="zap"></i> Intermediate</span>
+            </div>
+            <h3 class="program-title">Metabolic HIIT Fusion</h3>
+            <p class="program-desc">
+              Fast-paced, full-body metabolic conditioning circuits designed to push your cardiovascular capacity, burn calories, and build explosive stamina.
+            </p>
+            <button class="btn-link open-join-modal-btn">Enquire Program <i data-lucide="arrow-right"></i></button>
+          </div>
+        </div>
+        
+        <!-- Program 3 -->
+        <div class="program-card">
+          <div class="program-img-wrapper">
+            <img src="assets/images/trainer_yoga.png" alt="Yoga & Mindfulness" class="program-img" style="filter: brightness(0.7) contrast(1.05);">
+            <div class="program-badge">Mindfulness</div>
+          </div>
+          <div class="program-content">
+            <div class="program-meta">
+              <span><i data-lucide="clock"></i> 75 Min</span>
+              <span><i data-lucide="zap"></i> All Levels</span>
+            </div>
+            <h3 class="program-title">Power Yoga & mobility</h3>
+            <p class="program-desc">
+              Enhance active joint mobility, release deep muscle tension, and build core stability while centering your mind in a modern, meditative space.
+            </p>
+            <button class="btn-link open-join-modal-btn">Enquire Program <i data-lucide="arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       INTERACTIVE WEEKLY SCHEDULE
+       ========================================== -->
+  <section class="section" id="schedule">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Find Your Time</span>
+        <h2 class="section-title">WEEKLY CLASS SCHEDULE</h2>
+        <p class="section-description">
+          Choose a day to view our current class rotations. Secure your session slot in advance using the dynamic booking widget.
+        </p>
+      </div>
+      
+      <!-- Day Selector Tabs -->
+      <div class="schedule-tabs">
+        <button class="tab-btn active" data-day="monday">Mon</button>
+        <button class="tab-btn" data-day="tuesday">Tue</button>
+        <button class="tab-btn" data-day="wednesday">Wed</button>
+        <button class="tab-btn" data-day="thursday">Thu</button>
+        <button class="tab-btn" data-day="friday">Fri</button>
+        <button class="tab-btn" data-day="saturday">Sat</button>
+      </div>
+      
+      <!-- Dynamic Classes Grid -->
+      <div class="schedule-grid" id="scheduleGrid">
+        <!-- Rendered Dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       ELITE COACHES SECTION
+       ========================================== -->
+  <section class="section" id="trainers" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Train With The Best</span>
+        <h2 class="section-title">ELITE COACHING STAFF</h2>
+        <p class="section-description">
+          Our coaches aren't just trainers—they are industry leaders with degrees in kinesiology, certified nutrition specialties, and decades of combined experience.
+        </p>
+      </div>
+      
+      <div class="trainers-grid">
+        <!-- Coach 1 -->
+        <div class="trainer-card">
+          <img src="assets/images/trainer_male.png" alt="Marcus Vance" class="trainer-img">
+          <div class="trainer-overlay">
+            <span class="trainer-specialty">Strength & Performance</span>
+            <h3 class="trainer-name">Marcus Vance</h3>
+            <p class="trainer-bio">
+              Former competitive powerlifter with 12+ years of experience helping athletes master compound lifts and peak physical power.
+            </p>
+            <div class="trainer-socials">
+              <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Coach 2 -->
+        <div class="trainer-card">
+          <img src="assets/images/trainer_female.png" alt="Elena Rostova" class="trainer-img">
+          <div class="trainer-overlay">
+            <span class="trainer-specialty">HIIT & Athletic Nutrition</span>
+            <h3 class="trainer-name">Elena Rostova</h3>
+            <p class="trainer-bio">
+              Sports nutritionist specialist focusing on metabolic health, explosive fat loss, and custom food plans for endurance competitors.
+            </p>
+            <div class="trainer-socials">
+              <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Coach 3 -->
+        <div class="trainer-card">
+          <img src="assets/images/trainer_yoga.png" alt="Sarah Chen" class="trainer-img">
+          <div class="trainer-overlay">
+            <span class="trainer-specialty">Yoga & Active Mobility</span>
+            <h3 class="trainer-name">Sarah Chen</h3>
+            <p class="trainer-bio">
+              Certified yoga therapist with specialized training in active joint mobility, kinetic recovery, and breath-centered core work.
+            </p>
+            <div class="trainer-socials">
+              <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       INTERACTIVE BMI CALCULATOR
+       ========================================== -->
+  <section class="section" id="bmi">
+    <div class="container">
+      <div class="bmi-wrapper">
+        <div class="bmi-content">
+          <span class="section-subtitle" style="display:inline;">Assess Your Status</span>
+          <h3 style="margin-top: 1rem;">HEALTH & METRIC BMI INDEX</h3>
+          <p>
+            The Body Mass Index (BMI) evaluates your weight relative to height. Use this dynamic metric gauge to instantly find your category, and view personalized training advice.
+          </p>
+          
+          <div class="bmi-form">
+            <div class="input-row">
+              <div class="input-group">
+                <input type="number" id="bmiWeight" class="input-control" placeholder=" " min="30" max="250" required>
+                <label for="bmiWeight" class="input-label">Weight (kg)</label>
+              </div>
+              <div class="input-group">
+                <input type="number" id="bmiHeight" class="input-control" placeholder=" " min="100" max="250" required>
+                <label for="bmiHeight" class="input-label">Height (cm)</label>
+              </div>
+            </div>
+            
+            <button type="button" class="btn btn-primary" id="calculateBmiBtn">
+              Calculate Index
+            </button>
+          </div>
+        </div>
+        
+        <div class="bmi-visuals">
+          <div class="gauge-container">
+            <svg viewBox="0 0 300 150" class="gauge-svg">
+              <defs>
+                <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#3b82f6" /> <!-- Blue -->
+                  <stop offset="35%" stop-color="#C5F82A" /> <!-- Neon -->
+                  <stop offset="70%" stop-color="#f59e0b" /> <!-- Orange -->
+                  <stop offset="100%" stop-color="#ef4444" /> <!-- Red -->
+                </linearGradient>
+              </defs>
+              <!-- Background Arc -->
+              <path d="M 30 140 A 120 120 0 0 1 270 140" fill="none" stroke="var(--bg-primary)" stroke-width="15" stroke-linecap="round" />
+              <!-- Colored Arc -->
+              <path d="M 30 140 A 120 120 0 0 1 270 140" fill="none" stroke="url(#gaugeGrad)" stroke-width="15" stroke-linecap="round" />
+            </svg>
+            <div class="gauge-needle" id="bmiNeedle"></div>
+          </div>
+          
+          <div class="gauge-labels">
+            <span>15.0</span>
+            <span>20.0</span>
+            <span>25.0</span>
+            <span>30.0</span>
+            <span>35.0+</span>
+          </div>
+          
+          <!-- BMI Result Card (Revealed dynamically) -->
+          <div class="bmi-result-card" id="bmiResultCard">
+            <div class="bmi-number" id="bmiNumber">--</div>
+            <div class="bmi-status" id="bmiStatus">Enter details</div>
+            <p class="bmi-advice" id="bmiAdvice">
+              Fill in your metrics and click calculate.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       MEMBERSHIP PLANS (PRICING)
+       ========================================== -->
+  <section class="section" id="pricing" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Membership Plans</span>
+        <h2 class="section-title">CHOOSE YOUR INTENSITY</h2>
+        <p class="section-description">
+          Flexible passes built around your lifestyle. Toggle to annual plans to lock in exclusive premium rate savings.
+        </p>
+      </div>
+      
+      <!-- Pricing Toggle Switch -->
+      <div class="pricing-toggle-container">
+        <span class="toggle-label active">Monthly</span>
+        <label class="pricing-switch">
+          <input type="checkbox" id="pricingSwitch">
+          <span class="switch-slider"></span>
+        </label>
+        <span class="toggle-label">
+          Annually
+          <span class="pricing-badge">Save 20%</span>
+        </span>
+      </div>
+      
+      <!-- Pricing Cards -->
+      <div class="pricing-grid">
+        <!-- Plan 1 -->
+        <div class="pricing-card">
+          <h3 class="plan-name">Vigor Pass</h3>
+          <div class="plan-price-wrapper">
+            <span class="plan-price" id="priceBasic">$29</span>
+            <span class="plan-period">/mo</span>
+          </div>
+          
+          <ul class="plan-features">
+            <li><i data-lucide="check"></i> Unlimited gym floor entry</li>
+            <li><i data-lucide="check"></i> Modern locker room access</li>
+            <li><i data-lucide="check"></i> 1x complimentary trainer session</li>
+            <li class="disabled"><i data-lucide="x"></i> Group classes reservation</li>
+            <li class="disabled"><i data-lucide="x"></i> Recovery zone (Sauna & Plunge)</li>
+            <li class="disabled"><i data-lucide="x"></i> Custom health nutrition plans</li>
+          </ul>
+          
+          <button class="btn btn-secondary open-join-modal-btn" data-plan="Vigor Pass">Select Plan</button>
+        </div>
+        
+        <!-- Plan 2 -->
+        <div class="pricing-card popular">
+          <span class="popular-badge">Most Popular</span>
+          <h3 class="plan-name">Apex Pass</h3>
+          <div class="plan-price-wrapper">
+            <span class="plan-price" id="pricePremium">$59</span>
+            <span class="plan-period">/mo</span>
+          </div>
+          
+          <ul class="plan-features">
+            <li><i data-lucide="check"></i> Unlimited gym floor entry</li>
+            <li><i data-lucide="check"></i> All group classes included</li>
+            <li><i data-lucide="check"></i> 2x personal coach sessions/mo</li>
+            <li><i data-lucide="check"></i> Recovery zone access (Sauna)</li>
+            <li class="disabled"><i data-lucide="x"></i> Custom health nutrition plans</li>
+            <li class="disabled"><i data-lucide="x"></i> Guest day passes</li>
+          </ul>
+          
+          <button class="btn btn-primary open-join-modal-btn" data-plan="Apex Pass">Select Plan</button>
+        </div>
+        
+        <!-- Plan 3 -->
+        <div class="pricing-card">
+          <h3 class="plan-name">Elite Club</h3>
+          <div class="plan-price-wrapper">
+            <span class="plan-price" id="priceElite">$99</span>
+            <span class="plan-period">/mo</span>
+          </div>
+          
+          <ul class="plan-features">
+            <li><i data-lucide="check"></i> 24/7 Premium keycard entry</li>
+            <li><i data-lucide="check"></i> Unlimited classes & guests</li>
+            <li><i data-lucide="check"></i> Weekly 1-on-1 expert coaching</li>
+            <li><i data-lucide="check"></i> Full Recovery suite & Plunges</li>
+            <li><i data-lucide="check"></i> Specialized food/nutrition plans</li>
+            <li><i data-lucide="check"></i> Aura Athletics apparel merch</li>
+          </ul>
+          
+          <button class="btn btn-secondary open-join-modal-btn" data-plan="Elite Club">Select Plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TESTIMONIALS (CAROUSEL)
+       ========================================== -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Real Results</span>
+        <h2 class="section-title">CLIENT TRANSFORMATIONS</h2>
+        <p class="section-description">
+          Don't just take our word for it. Read the physical journey profiles of our active members.
+        </p>
+      </div>
+      
+      <div class="testimonials-slider">
+        <div class="testimonials-track-container">
+          <div class="testimonials-track" id="testimonialsTrack">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <div class="testimonial-card">
+                <i data-lucide="quote" class="quote-icon"></i>
+                <div class="testimonial-rating">
+                  <i data-lucide="star" fill="currentColor"></i>
+                  <i data-lucide="star" fill="currentColor"></i>
+                  <i data-lucide="star" fill="currentColor"></i>
+                  <i data-lucide="star" fill="currentColor"></i>
+                  <i data-lucide="star" fill="currentColor"></i>
+                </div>
+                <p class="testimonial-quote">
+                  "Training at Aura completely restructured my view on health. The trainers helped me transition from a sedentary lifestyle to lifting twice my bodyweight safely. The recovery saunas are an absolute game-changer!"
+                </p>
+                <div class="client-info">
+                  <img src="assets/images/trainer_female.png" alt="Sarah J." class="client-img">
+                  <div class="client-meta">
+                    <h4>Sarah Jenkins</h4>
+                    <p>Member for 14 Months</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide">
+              <div class="testimonial-card">
+                <i data-lucide="quote" class="quote-icon"></i>
+                <div class="testimonial-rating">
+                  <i data-lucide="star" fill="currentColor"></i>
+                  <i data-lucide="star" fill="currentColor"></i>
+                  <i data-lucide="star" fill="currentColor"></i>
+                  <i data-lucide="star" fill="currentColor"></i>
+                  <i data-lucide="star" fill="currentColor"></i>
+                </div>
+                <p class="testimonial-quote">
+                  "The community vibes and elite training platforms are outstanding. Under Marcus's strength program, I've broken all my personal records and cut down fat. It's the most premium gym space in town."
+                </p>
+                <div class="client-info">
+                  <img src="assets/images/trainer_male.png" alt="David M." class="client-img">
+                  <div class="client-meta">
+                    <h4>David Miller</h4>
+                    <p>Member for 8 Months</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide">
+              <div class="testimonial-card">
+                <i data-lucide="quote" class="quote-icon"></i>
+                <div class="testimonial-rating">
+                  <i data-lucide="star" fill="currentColor"></i>
+                  <i data-lucide="star" fill="currentColor"></i>
+                  <i data-lucide="star" fill="currentColor"></i>
+                  <i data-lucide="star" fill="currentColor"></i>
+                  <i data-lucide="star" fill="currentColor"></i>
+                </div>
+                <p class="testimonial-quote">
+                  "I love the flexibility of the classes. I can do metabolic HIIT in the morning, and active mobility yoga in the evening. The facilities are always perfectly clean and feel extremely high-end."
+                </p>
+                <div class="client-info">
+                  <img src="assets/images/trainer_yoga.png" alt="Amanda K." class="client-img">
+                  <div class="client-meta">
+                    <h4>Amanda Kerr</h4>
+                    <p>Member for 2 Years</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="slider-nav">
+          <button class="slider-btn" id="prevTestimonial" aria-label="Previous Testimonial">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button class="slider-btn" id="nextTestimonial" aria-label="Next Testimonial">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+        
+        <!-- Navigation Dots -->
+        <div class="slider-dots" id="sliderDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACT & MAP SECTION
+       ========================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <!-- Contact Form Card -->
+        <div class="contact-card">
+          <span class="section-subtitle">Reach Out</span>
+          <h3>TALK TO AN ELITE COACH</h3>
+          <form class="contact-form" id="contactForm">
+            <div class="input-group">
+              <input type="text" id="contactName" class="input-control" placeholder=" " required>
+              <label for="contactName" class="input-label">Full Name</label>
+            </div>
+            
+            <div class="input-group">
+              <input type="email" id="contactEmail" class="input-control" placeholder=" " required>
+              <label for="contactEmail" class="input-label">Email Address</label>
+            </div>
+            
+            <div class="textarea-group">
+              <textarea id="contactMessage" class="textarea-control" placeholder=" " required></textarea>
+              <label for="contactMessage" class="input-label">Tell us about your fitness targets...</label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">
+              Send Message
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact details and map -->
+        <div class="contact-info-map">
+          <div class="contact-details">
+            <div class="info-item">
+              <div class="info-icon-wrapper">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div class="info-text">
+                <h5>Location</h5>
+                <p>1200 Peak Street, Suite 400, NY 10001</p>
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <div class="info-icon-wrapper">
+                <i data-lucide="phone"></i>
+              </div>
+              <div class="info-text">
+                <h5>Phone Contact</h5>
+                <p>+1 (800) 555-AURA (2872)</p>
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <div class="info-icon-wrapper">
+                <i data-lucide="mail"></i>
+              </div>
+              <div class="info-text">
+                <h5>Email Support</h5>
+                <p>performance@aurathletics.com</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Styled Map Vector Placeholder -->
+          <div class="map-container">
+            <div class="map-placeholder">
+              <div class="map-grid-bg"></div>
+              <div class="map-glow-ring">
+                <i data-lucide="map-pin" class="map-marker"></i>
+              </div>
+              <div class="map-card">
+                <h4>AURA HQ</h4>
+                <p>Valet parking & locker guest passes available at reception.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1 -->
+        <div class="footer-col">
+          <a href="#home" class="logo footer-logo">
+            AURA<span>.</span>
+          </a>
+          <p class="footer-desc">
+            Redefine your physical limits, optimize recovery, and train under elite guidance at the city's most premium fitness hub.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+        
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#schedule">Class Schedule</a></li>
+          </ul>
+        </div>
+        
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h4>UTILITIES</h4>
+          <ul class="footer-links">
+            <li><a href="#trainers">Our Coaches</a></li>
+            <li><a href="#bmi">BMI Metric Calculator</a></li>
+            <li><a href="#pricing">Membership Pricing</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+          </ul>
+        </div>
+        
+        <!-- Col 4 -->
+        <div class="footer-col">
+          <h4>NEWSLETTER</h4>
+          <p class="footer-desc">
+            Sign up to receive training tutorials, nutrition blueprints, and exclusive guest events.
+          </p>
+          <form class="newsletter-form" id="newsletterForm">
+            <div class="input-group">
+              <input type="email" class="input-control" placeholder="Email" aria-label="Email Address" required>
+            </div>
+            <button type="submit" class="btn btn-primary" aria-label="Subscribe">
+              <i data-lucide="send"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aura Athletics Inc. All rights reserved. Made for professional gym management.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Options</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       MODALS / DYNAMIC OVERLAYS
+       ========================================== -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal" aria-label="Close Modal">&times;</button>
+      <h3 class="modal-title" id="modalTitle">JOIN AURA ATHLETICS</h3>
+      <p class="modal-desc" id="modalDesc">
+        Fill in your details below and an Elite advisor will reach out within 2 hours.
+      </p>
+      
+      <form class="contact-form" id="modalBookingForm">
+        <div class="input-group">
+          <input type="text" id="modalName" class="input-control" placeholder=" " required>
+          <label for="modalName" class="input-label">Full Name</label>
+        </div>
+        
+        <div class="input-group">
+          <input type="email" id="modalEmail" class="input-control" placeholder=" " required>
+          <label for="modalEmail" class="input-label">Email Address</label>
+        </div>
+        
+        <div class="input-group">
+          <input type="tel" id="modalPhone" class="input-control" placeholder=" " required>
+          <label for="modalPhone" class="input-label">Phone Number</label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Submit Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dynamic Success Toast Notification -->
+  <div class="success-popup" id="successToast">
+    <div class="success-icon-wrapper">
+      <i data-lucide="check-circle-2"></i>
+    </div>
+    <div class="success-text">
+      <h5>Success!</h5>
+      <p>Your action was registered.</p>
+    </div>
+  </div>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- JavaScript Logic -->
+  <script src="js/main.js"></script>
+</body>
+</html>
