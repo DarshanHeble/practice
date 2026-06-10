@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Business Websites | Workspace Portal</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg-primary: #0a0b10;
+      --bg-secondary: #12131a;
+      --accent-color: #00f0ff;
+      --accent-purple: #a855f7;
+      --text-main: #f3f4f6;
+      --text-secondary: #9ca3af;
+      --border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-x: hidden;
+    }
+
+    /* Background decorative glow elements */
+    .glow-bg {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, rgba(168, 85, 247, 0.05) 50%, transparent 100%);
+      top: -100px;
+      left: -100px;
+      z-index: -1;
+      filter: blur(50px);
+    }
+
+    .glow-bg-right {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, rgba(0, 240, 255, 0.04) 50%, transparent 100%);
+      bottom: -150px;
+      right: -150px;
+      z-index: -1;
+      filter: blur(60px);
+    }
+
+    header {
+      padding: 3rem 1.5rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 30%, #a855f7 70%, #00f0ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      color: var(--text-secondary);
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem 2rem;
+      width: 100%;
+    }
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    /* Card Styling */
+    .portal-card {
+      background: rgba(18, 19, 26, 0.6);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(16px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+    }
+
+    .portal-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, transparent);
+      transition: background 0.4s ease;
+    }
+
+    .portal-card.gym::before {
+      background: linear-gradient(90deg, #c5f82a, #10b981);
+    }
+    .portal-card.cake::before {
+      background: linear-gradient(90deg, #d97d8b, #c2a676);
+    }
+    .portal-card.tech::before {
+      background: linear-gradient(90deg, #00f0ff, #a855f7);
+    }
+
+    .portal-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-banner {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .card-banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, var(--bg-secondary) 100%);
+    }
+
+    .card-body {
+      padding: 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-type {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .gym .card-type { color: #c5f82a; }
+    .cake .card-type { color: #d97d8b; }
+    .tech .card-type { color: #00f0ff; }
+
+    .card-title {
+      font-size: 1.65rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .card-desc {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+    }
+
+    .btn-launch {
+      width: 100%;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      color: var(--text-main);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+
+    .portal-card.gym:hover .btn-launch {
+      background: #c5f82a;
+      color: #000000;
+      border-color: #c5f82a;
+    }
+
+    .portal-card.cake:hover .btn-launch {
+      background: #d97d8b;
+      color: #ffffff;
+      border-color: #d97d8b;
+    }
+
+    .portal-card.tech:hover .btn-launch {
+      background: linear-gradient(135deg, #00f0ff, #a855f7);
+      color: #ffffff;
+      border-color: transparent;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border-color);
+      background: rgba(10, 11, 16, 0.8);
+      width: 100%;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.25rem;
+      }
+      .portal-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow-bg"></div>
+  <div class="glow-bg-right"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>Premium Business Portfolio</h1>
+    <p>Launch page for customized, mobile-optimized business websites designed specifically for the Indian market.</p>
+  </header>
+
+  <!-- Portal Grid -->
+  <div class="container">
+    <div class="portal-grid">
+      
+      <!-- Card 1: Gym -->
+      <div class="portal-card gym">
+        <div class="card-banner" style="background-image: url('Gym/assets/images/hero_bg.png');"></div>
+        <div class="card-body">
+          <div>
+            <div class="card-type"><i data-lucide="dumbbell" style="width: 14px;"></i> Fitness Center</div>
+            <h2 class="card-title">AURA ATHLETICS</h2>
+            <p class="card-desc">Modern fitness center web experience. Features a BMI health index calculator, live weekly workout schedules, and class registration systems.</p>
+          </div>
+          <a href="Gym/index.html" class="btn-launch">
+            <span>Launch Site</span>
+            <i data-lucide="arrow-up-right" style="width: 16px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Cake Shop -->
+      <div class="portal-card cake">
+        <div class="card-banner" style="background-image: url('cake-shop/assets/images/cake_hero.png');"></div>
+        <div class="card-body">
+          <div>
+            <div class="card-type"><i data-lucide="cake" style="width: 14px;"></i> Premium Bakery</div>
+            <h2 class="card-title">L'AMOUR DU SUCRE</h2>
+            <p class="card-desc">Elegant visual bakery website. Features a custom cake builder, seasonal tasting box selector, and consultation forms.</p>
+          </div>
+          <a href="cake-shop/index.html" class="btn-launch">
+            <span>Launch Site</span>
+            <i data-lucide="arrow-up-right" style="width: 16px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Tech Shop -->
+      <div class="portal-card tech">
+        <div class="card-banner" style="background-image: url('tech-shop/assets/images/phone_hero.png');"></div>
+        <div class="card-body">
+          <div>
+            <div class="card-type"><i data-lucide="smartphone" style="width: 14px;"></i> Mobile Accessories</div>
+            <h2 class="card-title">VORTEX GEAR</h2>
+            <p class="card-desc">Interactive mobile accessories store. Features a 3D-style phone case customizer, categorized product collection grid, and a cart checkout system.</p>
+          </div>
+          <a href="tech-shop/index.html" class="btn-launch">
+            <span>Launch Site</span>
+            <i data-lucide="arrow-up-right" style="width: 16px;"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Premium Business Websites Portfolio. Designed with high-performance responsive UI.</p>
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

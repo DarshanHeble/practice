@@ -280,19 +280,19 @@ function initBmiCalculator() {
 
     if (bmi < 18.5) {
       statusText = 'Underweight';
-      adviceText = 'Consider structural strength training and a protein-rich calorie surplus.';
+      adviceText = 'Focus on lifting weights and eat healthy, protein-rich food to gain weight.';
       accentColor = '#3b82f6'; // Blue
     } else if (bmi >= 18.5 && bmi < 25) {
       statusText = 'Healthy Weight';
-      adviceText = 'Excellent! Maintain your physique with mixed metabolic and weight routines.';
+      adviceText = 'Great job! Keep fit with regular workouts and strength exercises.';
       accentColor = '#C5F82A'; // Aura Accent Neon
     } else if (bmi >= 25 && bmi < 30) {
       statusText = 'Overweight';
-      adviceText = 'Incorporate daily high-intensity interval classes (HIIT) and balanced nutrition.';
+      adviceText = 'Add fast cardio workouts (HIIT) to your routine and eat healthy, balanced food.';
       accentColor = '#f59e0b'; // Orange
     } else {
       statusText = 'Obese';
-      adviceText = 'Focus on cardiovascular endurance, personalized diet coaching, and consistency.';
+      adviceText = 'Focus on daily cardio exercises, consult our diet coach, and stay regular.';
       accentColor = '#ef4444'; // Red
     }
 
@@ -329,18 +329,18 @@ function initPricingToggle() {
       labels[1].classList.add('active');
       
       // Animate price swap
-      animatePriceChange(basicPrice, 24);
-      animatePriceChange(premiumPrice, 49);
-      animatePriceChange(elitePrice, 79);
+      animatePriceChange(basicPrice, 1999);
+      animatePriceChange(premiumPrice, 3199);
+      animatePriceChange(elitePrice, 6399);
       
       periodText.forEach(p => p.innerText = '/mo, billed annually');
     } else {
       labels[0].classList.add('active');
       labels[1].classList.remove('active');
       
-      animatePriceChange(basicPrice, 29);
-      animatePriceChange(premiumPrice, 59);
-      animatePriceChange(elitePrice, 99);
+      animatePriceChange(basicPrice, 2499);
+      animatePriceChange(premiumPrice, 3999);
+      animatePriceChange(elitePrice, 7999);
       
       periodText.forEach(p => p.innerText = '/mo');
     }
@@ -351,7 +351,7 @@ function initPricingToggle() {
     element.style.transform = 'translateY(-10px)';
     
     setTimeout(() => {
-      element.innerText = `$${targetValue}`;
+      element.innerText = `₹${targetValue}`;
       element.style.opacity = 1;
       element.style.transform = 'translateY(0)';
     }, 200);

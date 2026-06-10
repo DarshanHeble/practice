@@ -127,13 +127,13 @@ function initCakeBuilder() {
     topping: 'berries'    // berries, gold, flowers, none
   };
 
-  // Pricing configuration database
+  // Pricing configuration database (in INR)
   const PRICING_RULES = {
     flavors: {
-      chocolate: 35,
-      vanilla: 30,
-      redvelvet: 40,
-      pistachio: 45
+      chocolate: 800,
+      vanilla: 700,
+      redvelvet: 900,
+      pistachio: 1000
     },
     tiersMultiplier: {
       1: 1.0,
@@ -141,14 +141,14 @@ function initCakeBuilder() {
       3: 2.5
     },
     frostings: {
-      buttercream: 5,
-      fondant: 15,
+      buttercream: 100,
+      fondant: 300,
       naked: 0
     },
     toppings: {
-      berries: 8,
-      gold: 12,
-      flowers: 10,
+      berries: 150,
+      gold: 250,
+      flowers: 200,
       none: 0
     }
   };
@@ -239,19 +239,19 @@ function initCakeBuilder() {
   };
 
   const animatePrice = (targetPrice) => {
-    const startPrice = parseInt(priceDisplay.innerText.replace('$', '')) || 0;
+    const startPrice = parseInt(priceDisplay.innerText.replace('₹', '')) || 0;
     const duration = 600; // ms
     const startTime = performance.now();
 
     const updateCount = (timestamp) => {
       const progress = Math.min((timestamp - startTime) / duration, 1);
       const currentVal = Math.floor(progress * (targetPrice - startPrice) + startPrice);
-      priceDisplay.innerText = `$${currentVal}`;
+      priceDisplay.innerText = `₹${currentVal}`;
 
       if (progress < 1) {
         requestAnimationFrame(updateCount);
       } else {
-        priceDisplay.innerText = `$${targetPrice}`;
+        priceDisplay.innerText = `₹${targetPrice}`;
       }
     };
 
@@ -282,7 +282,7 @@ function initCakeBuilder() {
   // Trigger Add To Cart
   if (addToCartBtn) {
     addToCartBtn.addEventListener('click', () => {
-      const summaryMsg = `Custom ${cakeConfig.tiers}-Tier ${cakeConfig.flavor.toUpperCase()} Cake with ${cakeConfig.frosting} frosting has been added to your Box!`;
+      const summaryMsg = `Custom ${cakeConfig.tiers}-Tier ${cakeConfig.flavor.toUpperCase()} Cake has been added to your tasting box!`;
       
       if (window.showCakeToast) {
         window.showCakeToast('Custom Order Added!', summaryMsg);
@@ -301,19 +301,19 @@ function initCakeBuilder() {
    ========================================================================== */
 const MENU_DATA = {
   signature: [
-    { title: 'Chocolate Raspberry Drip', price: '$42.00', rating: 5, desc: 'Decadent chocolate sponge layers layered with fresh raspberry compote and coated in glossy dark ganache drips.', img: 'assets/images/cake_chocolate.png' },
-    { title: 'Lemon Elderflower Arch', price: '$48.00', rating: 5, desc: 'Zesty lemon sponge infused with organic elderflower syrup, decorated with delicate floral sugar accents.', img: 'assets/images/cake_hero.png' },
-    { title: 'Salted Caramel Macadamia', price: '$45.00', rating: 4, desc: 'Soft sponge layered with gold butterscotch caramel, toasted macadamia nuts, and topped with sea salt flakes.', img: 'assets/images/cake_chocolate.png' }
+    { title: 'Chocolate Raspberry Cake', price: '₹1200', rating: 5, desc: 'Rich chocolate cake layers filled with fresh raspberry jam and topped with warm dark chocolate sauce.', img: 'assets/images/cake_chocolate.png' },
+    { title: 'Lemon Flower Cake', price: '₹1500', rating: 5, desc: 'Fresh lemon cake filled with sweet syrup and decorated with beautiful sugar flowers.', img: 'assets/images/cake_hero.png' },
+    { title: 'Salted Caramel Nut Cake', price: '₹1400', rating: 4, desc: 'Soft cake layers with sweet butterscotch caramel, toasted nuts, and a touch of sea salt.', img: 'assets/images/cake_chocolate.png' }
   ],
   cupcake: [
-    { title: 'Velvet Pearl Cupcake', price: '$4.50', rating: 5, desc: 'Classic deep crimson red velvet base topped with a smooth dome of cream cheese frosting and sweet sugar pearls.', img: 'assets/images/cake_cupcake.png' },
-    { title: 'Lavender Blueberry Swirl', price: '$4.75', rating: 5, desc: 'Fragrant French lavender cupcake with wild blueberry filling and a soft lavender whipped cream swirl.', img: 'assets/images/cake_cupcake.png' },
-    { title: 'Pistachio Rose Buds', price: '$5.00', rating: 4, desc: 'Pistachio nut crumble cupcake topped with light rosewater buttercream and a single candied rose petal.', img: 'assets/images/cake_cupcake.png' }
+    { title: 'Red Velvet Cupcake', price: '₹120', rating: 5, desc: 'Classic red velvet cupcake topped with smooth cream cheese frosting and white sugar pearls.', img: 'assets/images/cake_cupcake.png' },
+    { title: 'Blueberry Swirl Cupcake', price: '₹130', rating: 5, desc: 'Sweet vanilla cupcake with fresh blueberry filling and soft whipped cream.', img: 'assets/images/cake_cupcake.png' },
+    { title: 'Pistachio Rose Cupcake', price: '₹150', rating: 4, desc: 'Pistachio cupcake topped with light rosewater frosting and a sweet rose petal.', img: 'assets/images/cake_cupcake.png' }
   ],
   pastry: [
-    { title: 'Double Almond Croissant', price: '$5.50', rating: 5, desc: 'Slow-baked buttery flaky croissant filled with rich almond frangipane paste and coated in shaved nuts.', img: 'assets/images/cake_hero.png' },
-    { title: 'Artisanal Macaron Box', price: '$18.00', rating: 5, desc: 'A curated assortment of 6 gluten-free French macarons (Pistachio, Salted Caramel, Rose, Lemon, Vanilla, Espresso).', img: 'assets/images/cake_cupcake.png' },
-    { title: 'Wild Strawberry Tartlet', price: '$6.00', rating: 4, desc: 'Crisp buttery pastry shell filled with vanilla bean pastry cream and piled with glazed organic strawberries.', img: 'assets/images/cake_chocolate.png' }
+    { title: 'Butter Almond Croissant', price: '₹180', rating: 5, desc: 'Freshly baked butter croissant filled with sweet almond cream and topped with crunchy sliced almonds.', img: 'assets/images/cake_hero.png' },
+    { title: 'Premium Macaron Box', price: '₹600', rating: 5, desc: 'A box of 6 gluten-free French macarons (Pistachio, Salted Caramel, Rose, Lemon, Vanilla, Chocolate).', img: 'assets/images/cake_cupcake.png' },
+    { title: 'Fresh Strawberry Tart', price: '₹200', rating: 4, desc: 'Crisp butter pastry filled with sweet vanilla cream and fresh strawberries.', img: 'assets/images/cake_chocolate.png' }
   ]
 };
 

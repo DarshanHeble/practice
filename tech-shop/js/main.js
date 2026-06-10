@@ -134,9 +134,9 @@ function initCartDrawer() {
     if (cart.length === 0) {
       itemsWrapper.innerHTML = `<p class="cart-empty-msg">Your shopping bag is empty.</p>`;
       countBadge.style.display = 'none';
-      subtotalPrice.innerText = '$0.00';
-      deliveryPrice.innerText = '$0.00';
-      totalPrice.innerText = '$0.00';
+      subtotalPrice.innerText = '₹0';
+      deliveryPrice.innerText = '₹0';
+      totalPrice.innerText = '₹0';
       return;
     }
 
@@ -166,17 +166,17 @@ function initCartDrawer() {
           </div>
           <span class="remove-item-link" data-id="${item.id}">Remove</span>
         </div>
-        <div class="cart-item-price">$${itemSubtotal.toFixed(2)}</div>
+        <div class="cart-item-price">₹${itemSubtotal}</div>
       `;
       itemsWrapper.appendChild(itemDiv);
     });
 
-    const deliveryFee = subtotal > 75 ? 0 : 5.99;
+    const deliveryFee = subtotal > 999 ? 0 : 99;
     const total = subtotal + deliveryFee;
 
-    subtotalPrice.innerText = `$${subtotal.toFixed(2)}`;
-    deliveryPrice.innerText = deliveryFee === 0 ? 'FREE' : `$${deliveryFee.toFixed(2)}`;
-    totalPrice.innerText = `$${total.toFixed(2)}`;
+    subtotalPrice.innerText = `₹${subtotal}`;
+    deliveryPrice.innerText = deliveryFee === 0 ? 'FREE' : `₹${deliveryFee}`;
+    totalPrice.innerText = `₹${total}`;
 
     attachCartActions();
   };
@@ -238,13 +238,13 @@ function initCartDrawer() {
     openCart();
     
     if (window.showTechToast) {
-      window.showTechToast('Item Added', `${item.name} loaded to bag.`);
+      window.showTechToast('Item Added', `${item.name} added to bag.`);
     }
   };
 
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
-      alert('Secure payment gateway connected. Order registered successfully.');
+      alert('Thank you! Your order has been placed successfully. We will call you soon.');
       cart = [];
       renderCart();
       closeCart();
@@ -279,13 +279,13 @@ function initCaseCustomizer() {
 
   const PRICING = {
     base: {
-      'iPhone 15 Pro': 49,
-      'Galaxy S24 Ultra': 45
+      'iPhone 15 Pro': 1499,
+      'Galaxy S24 Ultra': 1299
     },
     types: {
-      carbon: 25,
-      clear: 15,
-      leather: 30
+      carbon: 699,
+      clear: 399,
+      leather: 899
     }
   };
 
@@ -315,19 +315,19 @@ function initCaseCustomizer() {
   };
 
   const animatePrice = (targetPrice) => {
-    const startPrice = parseInt(priceDisplay.innerText.replace('$', '')) || 0;
+    const startPrice = parseInt(priceDisplay.innerText.replace('₹', '')) || 0;
     const duration = 400; // ms
     const startTime = performance.now();
 
     const updateCount = (timestamp) => {
       const progress = Math.min((timestamp - startTime) / duration, 1);
       const currentVal = Math.floor(progress * (targetPrice - startPrice) + startPrice);
-      priceDisplay.innerText = `$${currentVal}`;
+      priceDisplay.innerText = `₹${currentVal}`;
 
       if (progress < 1) {
         requestAnimationFrame(updateCount);
       } else {
-        priceDisplay.innerText = `$${targetPrice}`;
+        priceDisplay.innerText = `₹${targetPrice}`;
       }
     };
 
@@ -404,12 +404,12 @@ function initCaseCustomizer() {
    6. CATALOG GRID DATA
    ========================================================================== */
 const PRODUCTS_DATABASE = [
-  { id: 'p1', name: 'MagClick Clear Shield', category: 'cases', price: 39.00, img: 'assets/images/accessory_case.png', compat: 'iPhone 15/14 Pro' },
-  { id: 'p2', name: 'Carbon Forge Ultra', category: 'cases', price: 59.00, img: 'assets/images/phone_hero.png', compat: 'Galaxy S24/iPhone 15' },
-  { id: 'p3', name: 'GaN 140W Quad Charger', category: 'chargers', price: 89.00, img: 'assets/images/accessory_charger.png', compat: 'Universal GaN tech' },
-  { id: 'p4', name: 'Magnetic Auto Car Mount', category: 'chargers', price: 49.00, img: 'assets/images/accessory_charger.png', compat: 'MagSafe Compatible' },
-  { id: 'p5', name: 'Shield Tempered Glass 2x', category: 'cases', price: 24.00, img: 'assets/images/accessory_case.png', compat: 'iPhone 15/15 Pro' },
-  { id: 'p6', name: 'Braided Type-C Fast Cord', category: 'chargers', price: 19.00, img: 'assets/images/accessory_charger.png', compat: '240W Power Delivery' }
+  { id: 'p1', name: 'Transparent Magnetic Case', category: 'cases', price: 999, img: 'assets/images/accessory_case.png', compat: 'iPhone 15/14 Pro' },
+  { id: 'p2', name: 'Carbon Fiber Case', category: 'cases', price: 1499, img: 'assets/images/phone_hero.png', compat: 'Galaxy S24 / iPhone 15' },
+  { id: 'p3', name: '140W 4-Port Fast Charger', category: 'chargers', price: 2499, img: 'assets/images/accessory_charger.png', compat: 'Fast charger for all phones' },
+  { id: 'p4', name: 'Magnetic Car Phone Holder', category: 'chargers', price: 1299, img: 'assets/images/accessory_charger.png', compat: 'Fits all magnetic cases' },
+  { id: 'p5', name: 'Strong Tempered Glass (2 Pack)', category: 'cases', price: 499, img: 'assets/images/accessory_case.png', compat: 'iPhone 15/15 Pro' },
+  { id: 'p6', name: 'Type-C Fast Charging Cable', category: 'chargers', price: 299, img: 'assets/images/accessory_charger.png', compat: '240W fast charging' }
 ];
 
 function initCatalogGrid() {
@@ -440,7 +440,7 @@ function initCatalogGrid() {
         <h4 class="card-title">${item.name}</h4>
         
         <div class="card-price-row">
-          <div class="card-price">$${item.price.toFixed(2)}</div>
+          <div class="card-price">₹${item.price}</div>
           <button class="btn btn-secondary buy-now-btn" data-id="${item.id}">
             Add to Bag
           </button>
