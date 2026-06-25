@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
     veg: "Tastes & More is a 100% pure vegetarian restaurant. We follow strict traditional cooking standards with clean utensils and zero meat contamination.",
     timings: "Our serving hours are:<br>• Breakfast: 8:00 AM - 11:30 AM<br>• Lunch & Dinner: 12:00 PM - 11:00 PM everyday.",
     delivery: "Yes, we deliver within a 5km radius! You can place an order using the 'Order Online' button on our page, or find us on Swiggy and Zomato.",
-    reserve: "You can book a table by calling us at +91 98765 43210, or fill out the reservation form in the Contact section at the bottom of the page.",
+    reserve: "You can book a table by calling us at +91 90077 32566, or fill out the reservation form in the Contact section at the bottom of the page.",
     location: "We are located at 12, Palace Road, Vasanth Nagar, Bengaluru, Karnataka 560052. Feel free to use the interactive map below to find us!"
   };
 
@@ -449,7 +449,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Simple NLP check
     setTimeout(() => {
-      let reply = "Thank you for your question! For detailed enquiries, please contact us directly at +91 98765 43210 or write in our Contact section.";
+      let reply = "Thank you for your question! For detailed enquiries, please contact us directly at +91 90077 32566 or write in our Contact section.";
       const query = text.toLowerCase();
 
       if (query.includes('veg') || query.includes('pure') || query.includes('meat') || query.includes('egg')) {
@@ -472,6 +472,39 @@ document.addEventListener('DOMContentLoaded', () => {
     sendFaqMsg.addEventListener('click', handleFaqSubmit);
     faqUserInput.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') handleFaqSubmit();
+    });
+  }
+
+  // Printed Menu Modal Logic
+  const viewMenuBtn = document.getElementById('viewMenuBtn');
+  const menuModal = document.getElementById('menuModal');
+  const closeMenuModal = document.getElementById('closeMenuModal');
+  const modalBackdrop = document.querySelector('.menu-modal-backdrop');
+
+  if (viewMenuBtn && menuModal) {
+    viewMenuBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      menuModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Stop background scrolling
+    });
+
+    const closeModal = () => {
+      menuModal.classList.remove('active');
+      document.body.style.overflow = ''; // Resume scrolling
+    };
+
+    if (closeMenuModal) closeMenuModal.addEventListener('click', closeModal);
+    if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+  }
+
+  // Preloader Fade Out Logic
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      // Delay slightly for visual comfort and entry animation completion
+      setTimeout(() => {
+        preloader.classList.add('fade-out');
+      }, 800);
     });
   }
 });
