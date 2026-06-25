@@ -507,4 +507,38 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 800);
     });
   }
+
+  // Banta Clink Toast Animation Timeline Observer
+  const bantaSection = document.getElementById('banta');
+  if (bantaSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Phase 1: Slide-In Entrance
+          bantaSection.classList.add('toast-active');
+          
+          // Phase 2: Clink Impact, Flash, Splash, and Marble Drop (1.15s)
+          setTimeout(() => {
+            bantaSection.classList.add('toast-impacted');
+          }, 1150);
+          
+          // Phase 3 & 4: Settle right bottle, fade left bottle, portal reveal (1.6s)
+          setTimeout(() => {
+            bantaSection.classList.remove('toast-active');
+            bantaSection.classList.add('toast-settling');
+          }, 1600);
+          
+          // Phase 5: Transition to Continuous Idle Float & Bubbling State (2.8s)
+          setTimeout(() => {
+            bantaSection.classList.remove('toast-settling');
+            bantaSection.classList.add('toast-settled');
+          }, 2800);
+          
+          observer.unobserve(bantaSection); // Run the animation sequence only once
+        }
+      });
+    }, { threshold: 0.25 });
+    
+    observer.observe(bantaSection);
+  }
 });

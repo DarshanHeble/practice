@@ -884,7 +884,7 @@
 
     <div class="container banta-layout">
       <!-- Left: Text Content -->
-      <div class="banta-content animate-on-scroll">
+      <div class="banta-content">
         <span class="banta-tag">🧊 Ice Cold & Refreshing</span>
         <h2 class="banta-title">Banta Goli Soda</h2>
         <p class="banta-subtitle">Your New Pop!!</p>
@@ -904,13 +904,35 @@
         </div>
       </div>
 
-      <!-- Right: Crazy Animated Bottle -->
-      <div class="banta-stage animate-on-scroll delay-2">
-        <!-- Shadow on surface -->
+      <!-- Right: Toast Showcase Stage -->
+      <div class="banta-stage">
+        <!-- Shadow on surface (revealed in Phase 3) -->
         <div class="banta-shadow"></div>
-        <!-- Main bottle -->
+        
+        <!-- Glow Portal Backdrop (revealed in Phase 3) -->
+        <div class="banta-portal-backdrop"></div>
+
+        <!-- Clink FX elements -->
+        <div class="toast-flash"></div>
+        <div class="fizz-splash">
+          <span class="splash-drop drop-1"></span>
+          <span class="splash-drop drop-2"></span>
+          <span class="splash-drop drop-3"></span>
+          <span class="splash-drop drop-4"></span>
+          <span class="splash-drop drop-5"></span>
+          <span class="splash-drop drop-6"></span>
+        </div>
+
+        <!-- Left Toast Bottle (temporary) -->
+        <div class="banta-bottle-left">
+          <img src="assets/images/banta.png" alt="Banta Left" class="banta-bottle-img-left">
+          <span class="goli-bead goli-left"></span>
+        </div>
+
+        <!-- Main/Right Toast Bottle (The Hero Bottle) -->
         <div class="banta-bottle-wrapper">
           <img src="assets/images/banta.png" alt="Fizzies Goli Soda Banta Bottle" class="banta-bottle-main">
+          <span class="goli-bead goli-right"></span>
         </div>
       </div>
     </div>

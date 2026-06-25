@@ -958,83 +958,237 @@ header.navbar-container.scrolled .nav-logo h2 {
   box-shadow: 0 8px 30px rgba(56, 189, 248, 0.5);
 }
 
-/* --- Bottle Stage --- */
+/* --- Bottle Stage & Toast Animation Sequence --- */
 .banta-stage {
   position: relative;
   height: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
 }
 
-/* Main bottle container — styled as a premium glassmorphic circular portal/lens */
-.banta-bottle-wrapper {
-  position: relative;
-  z-index: 5;
+/* Glassmorphic Circular Portal Backdrop (revealed in Phase 3) */
+.banta-portal-backdrop {
+  position: absolute;
+  z-index: 3;
   width: 420px;
   height: 420px;
   border-radius: 50%;
   background: radial-gradient(circle at center, rgba(56, 189, 248, 0.15) 0%, rgba(255, 255, 255, 0.02) 70%);
   border: 2px solid rgba(56, 189, 248, 0.25);
-  box-shadow: 0 20px 50px rgba(10, 22, 40, 0.4),
-    0 0 60px rgba(56, 189, 248, 0.2),
-    inset 0 0 40px rgba(56, 189, 248, 0.1);
+  box-shadow: 0 0 60px rgba(56, 189, 248, 0.2), inset 0 0 40px rgba(56, 189, 248, 0.1);
   backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: bottleGentleFloat 6s ease-in-out infinite;
-  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.5s ease, box-shadow 0.5s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  opacity: 0;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease;
 }
 
-.banta-bottle-wrapper:hover {
-  border-color: rgba(56, 189, 248, 0.5);
-  box-shadow: 0 30px 60px rgba(10, 22, 40, 0.6),
-    0 0 80px rgba(56, 189, 248, 0.35),
-    inset 0 0 50px rgba(56, 189, 248, 0.15);
+.banta-section.toast-settled .banta-portal-backdrop {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
-.banta-bottle-main {
-  height: 460px; /* Slightly taller than wrapper for beautiful 3D layered overflow */
-  width: auto;
-  position: absolute;
-  bottom: 15px;
-  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5))
-          drop-shadow(0 0 30px rgba(56, 189, 248, 0.45));
-  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.banta-bottle-wrapper:hover .banta-bottle-main {
-  transform: scale(1.06) translateY(-10px);
-}
-
-/* Gentle, elegant vertical float animation */
-@keyframes bottleGentleFloat {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-15px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* Pulsing shadow under bottle */
+/* Floor Shadow */
 .banta-shadow {
   position: absolute;
   bottom: 0px;
   left: 50%;
-  transform: translateX(-50%);
-  width: 260px;
-  height: 20px;
+  transform: translateX(-50%) scaleX(0.5);
+  width: 280px;
+  height: 24px;
   background: radial-gradient(ellipse, rgba(56, 189, 248, 0.4) 0%, transparent 70%);
   border-radius: 50%;
-  animation: shadowPulse 6s ease-in-out infinite;
+  opacity: 0;
+  transition: transform 1.2s ease, opacity 1s ease;
   z-index: 1;
+}
+
+.banta-section.toast-settled .banta-shadow {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 0.8;
+  animation: shadowPulse 6s ease-in-out infinite;
+}
+
+/* Glass Marble (Goli) Inside Bottle Neck */
+.goli-bead {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle at 35% 35%, rgba(147, 197, 253, 0.9) 0%, rgba(59, 130, 246, 0.95) 50%, rgba(30, 58, 138, 1) 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.8), inset 0 0 4px rgba(255, 255, 255, 0.8);
+  top: 75px;
+  /* High position initially */
+  z-index: 6;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.banta-bottle-left .goli-bead {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.banta-bottle-wrapper .goli-bead {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Fall Goli Bead after impact */
+.banta-section.toast-impacted .goli-bead {
+  top: 175px;
+  /* Drops down to chamber */
+}
+
+/* Left Toast Bottle (temporary) */
+.banta-bottle-left {
+  position: absolute;
+  z-index: 4;
+  width: 180px;
+  height: 420px;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -240px;
+  transform: translate(-300px, 450px) rotate(-45deg);
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1), opacity 0.5s ease;
+}
+
+.banta-bottle-img-left {
+  height: 420px;
+  width: auto;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
+  transform: scaleX(-1);
+  /* Flip horizontally to face the other bottle */
+}
+
+/* Right Toast Bottle (The Hero Bottle Wrapper) */
+.banta-bottle-wrapper {
+  position: absolute;
+  z-index: 5;
+  width: 180px;
+  height: 420px;
+  bottom: 60px;
+  left: 50%;
+  margin-left: 60px;
+  transform: translate(300px, 450px) rotate(45deg);
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1), opacity 0.5s ease;
+}
+
+.banta-bottle-main {
+  height: 460px;
+  width: auto;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Phase 1: Slide In Entrance & Opacity Persistence */
+.banta-section.toast-active .banta-bottle-left,
+.banta-section.toast-impacted .banta-bottle-left {
+  transform: translate(80px, -40px) rotate(-15deg);
+  /* Clink position left */
+  opacity: 1;
+}
+
+.banta-section.toast-active .banta-bottle-wrapper,
+.banta-section.toast-impacted .banta-bottle-wrapper,
+.banta-section.toast-settling .banta-bottle-wrapper,
+.banta-section.toast-settled .banta-bottle-wrapper {
+  opacity: 1;
+}
+
+.banta-section.toast-active .banta-bottle-wrapper {
+  transform: translate(-80px, -40px) rotate(15deg);
+  /* Clink position right */
+}
+
+/* Phase 2: Clink Clash Spring Easing */
+.banta-section.toast-impacted .banta-bottle-left {
+  animation: leftClinkImpact 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.banta-section.toast-impacted .banta-bottle-wrapper {
+  animation: rightClinkImpact 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes leftClinkImpact {
+  0% {
+    transform: translate(80px, -40px) rotate(-15deg);
+  }
+
+  30% {
+    transform: translate(95px, -35px) rotate(-12deg);
+  }
+
+  /* overshoot clink */
+  100% {
+    transform: translate(75px, -40px) rotate(-16deg);
+  }
+
+  /* rebound */
+}
+
+@keyframes rightClinkImpact {
+  0% {
+    transform: translate(-80px, -40px) rotate(15deg);
+  }
+
+  30% {
+    transform: translate(-95px, -35px) rotate(12deg);
+  }
+
+  /* overshoot clink */
+  100% {
+    transform: translate(-75px, -40px) rotate(16deg);
+  }
+
+  /* rebound */
+}
+
+/* Phase 3: Left retreat and Right settles to absolute center of stage */
+.banta-section.toast-settling .banta-bottle-left {
+  transform: translate(-250px, 450px) rotate(-45deg);
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.6, -0.28, 0.735, 0.045), opacity 0.8s ease;
+}
+
+.banta-section.toast-settling .banta-bottle-wrapper {
+  transform: translate(-90px, 0px) rotate(0deg);
+  /* Settling position */
+  margin-left: 0;
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Phase 5: Continuous Idle Float state */
+.banta-section.toast-settled .banta-bottle-wrapper {
+  transform: translate(-90px, 0px) rotate(0deg);
+  margin-left: 0;
+  animation: bottleGentleFloat 6s ease-in-out infinite;
+}
+
+.banta-section.toast-settled .banta-bottle-wrapper:hover .banta-bottle-main {
+  transform: translateX(-50%) scale(1.05) translateY(-5px);
+}
+
+@keyframes bottleGentleFloat {
+
+  0%,
+  100% {
+    transform: translate(-90px, 0px);
+  }
+
+  50% {
+    transform: translate(-90px, -15px);
+  }
 }
 
 @keyframes shadowPulse {
@@ -1049,6 +1203,205 @@ header.navbar-container.scrolled .nav-logo h2 {
     transform: translateX(-50%) scaleX(1.2);
     opacity: 0.4;
   }
+}
+
+/* Clink Blue Flash Effect */
+.toast-flash {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.8) 0%, rgba(14, 165, 233, 0.4) 40%, transparent 70%);
+  border-radius: 50%;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.5);
+  left: 50%;
+  top: 40%;
+  margin-left: -75px;
+}
+
+.banta-section.toast-impacted .toast-flash {
+  animation: flashBurst 0.5s ease-out forwards;
+}
+
+@keyframes flashBurst {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2.2);
+  }
+}
+
+/* Clink Splash Fizz droplets */
+.fizz-splash {
+  position: absolute;
+  z-index: 11;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  top: 35%;
+  margin-left: -40px;
+  pointer-events: none;
+}
+
+.splash-drop {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #38bdf8;
+  border-radius: 50%;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+}
+
+.banta-section.toast-impacted .splash-drop {
+  animation: splashOut 0.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+.splash-drop.drop-1 {
+  --dx: -40px;
+  --dy: -50px;
+  animation-delay: 1.15s;
+}
+
+.splash-drop.drop-2 {
+  --dx: 40px;
+  --dy: -50px;
+  animation-delay: 1.15s;
+}
+
+.splash-drop.drop-3 {
+  --dx: -60px;
+  --dy: -10px;
+  animation-delay: 1.15s;
+}
+
+.splash-drop.drop-4 {
+  --dx: 60px;
+  --dy: -10px;
+  animation-delay: 1.15s;
+}
+
+.splash-drop.drop-5 {
+  --dx: -20px;
+  --dy: -70px;
+  animation-delay: 1.18s;
+}
+
+.splash-drop.drop-6 {
+  --dx: 20px;
+  --dy: -70px;
+  animation-delay: 1.18s;
+}
+
+@keyframes splashOut {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(var(--dx), var(--dy)) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* --- Phase 4: Staggered UI Reveal --- */
+.banta-content>* {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.banta-content .banta-tag {
+  transform: translateY(-20px);
+}
+
+.banta-content .banta-features .banta-feature {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.banta-content .banta-price-row {
+  transform: scale(0.9);
+}
+
+/* Stagger reveal when toast-settled or toast-settling active */
+.banta-section.toast-settling .banta-content .banta-tag,
+.banta-section.toast-settled .banta-content .banta-tag {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.banta-section.toast-settling .banta-content .banta-title,
+.banta-section.toast-settled .banta-content .banta-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.banta-section.toast-settling .banta-content .banta-subtitle,
+.banta-section.toast-settled .banta-content .banta-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.banta-section.toast-settling .banta-content .banta-desc,
+.banta-section.toast-settled .banta-content .banta-desc {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+.banta-section.toast-settling .banta-content .banta-features .banta-feature,
+.banta-section.toast-settled .banta-content .banta-features .banta-feature {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.banta-section.toast-settling .banta-content .banta-features .banta-feature:nth-child(1),
+.banta-section.toast-settled .banta-content .banta-features .banta-feature:nth-child(1) {
+  transition-delay: 1.0s;
+}
+
+.banta-section.toast-settling .banta-content .banta-features .banta-feature:nth-child(2),
+.banta-section.toast-settled .banta-content .banta-features .banta-feature:nth-child(2) {
+  transition-delay: 1.15s;
+}
+
+.banta-section.toast-settling .banta-content .banta-features .banta-feature:nth-child(3),
+.banta-section.toast-settled .banta-content .banta-features .banta-feature:nth-child(3) {
+  transition-delay: 1.3s;
+}
+
+.banta-section.toast-settling .banta-content .banta-features .banta-feature:nth-child(4),
+.banta-section.toast-settled .banta-content .banta-features .banta-feature:nth-child(4) {
+  transition-delay: 1.45s;
+}
+
+.banta-section.toast-settling .banta-content .banta-price-row,
+.banta-section.toast-settled .banta-content .banta-price-row {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 1.6s;
 }
 
 /* --- Fizzing Bubbles --- */
@@ -2617,21 +2970,141 @@ header.navbar-container.scrolled .nav-logo h2 {
     height: 400px;
   }
 
-  .banta-bottle-main {
-    height: 310px;
-    bottom: 10px;
+  .banta-portal-backdrop {
+    width: 280px;
+    height: 280px;
+  }
+
+  .banta-bottle-left {
+    width: 130px;
+    height: 300px;
+    bottom: 40px;
+    margin-left: -160px;
+    transform: translate(-150px, 300px) rotate(-45deg);
+  }
+
+  .banta-bottle-img-left {
+    height: 300px;
   }
 
   .banta-bottle-wrapper {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    padding: 0;
+    width: 130px;
+    height: 300px;
+    bottom: 40px;
+    margin-left: 40px;
+    border-radius: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    transform: translate(150px, 300px) rotate(45deg);
+  }
+
+  .banta-bottle-main {
+    height: 320px;
+    bottom: -15px;
+  }
+
+  .goli-bead {
+    width: 10px;
+    height: 10px;
+    top: 50px;
+  }
+
+  .banta-section.toast-impacted .goli-bead {
+    top: 120px;
+  }
+
+  .banta-section.toast-active .banta-bottle-left {
+    transform: translate(50px, -20px) rotate(-15deg);
+  }
+
+  .banta-section.toast-active .banta-bottle-wrapper {
+    transform: translate(-50px, -20px) rotate(15deg);
+  }
+
+  .banta-section.toast-impacted .banta-bottle-left {
+    animation: leftClinkImpactMobile 0.4s ease-out forwards;
+  }
+
+  .banta-section.toast-impacted .banta-bottle-wrapper {
+    animation: rightClinkImpactMobile 0.4s ease-out forwards;
+  }
+
+  @keyframes leftClinkImpactMobile {
+    0% {
+      transform: translate(50px, -20px) rotate(-15deg);
+    }
+
+    30% {
+      transform: translate(60px, -17px) rotate(-13deg);
+    }
+
+    100% {
+      transform: translate(45px, -20px) rotate(-16deg);
+    }
+  }
+
+  @keyframes rightClinkImpactMobile {
+    0% {
+      transform: translate(-50px, -20px) rotate(15deg);
+    }
+
+    30% {
+      transform: translate(-60px, -17px) rotate(13deg);
+    }
+
+    100% {
+      transform: translate(-45px, -20px) rotate(16deg);
+    }
+  }
+
+  .banta-section.toast-settling .banta-bottle-left {
+    transform: translate(-150px, 350px) rotate(-45deg);
+  }
+
+  .banta-section.toast-settling .banta-bottle-wrapper {
+    transform: translate(-65px, 0px) rotate(0deg);
+  }
+
+  .banta-section.toast-settled .banta-bottle-wrapper {
+    transform: translate(-65px, 0px) rotate(0deg);
+    animation: bottleGentleFloatMobile 6s ease-in-out infinite;
+  }
+
+  @keyframes bottleGentleFloatMobile {
+
+    0%,
+    100% {
+      transform: translate(-65px, 0px);
+    }
+
+    50% {
+      transform: translate(-65px, -10px);
+    }
   }
 
   .banta-shadow {
     width: 180px;
     bottom: 25px;
+  }
+
+  .banta-section.toast-settled .banta-shadow {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .toast-flash {
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    top: 45%;
+  }
+
+  .fizz-splash {
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    top: 40%;
   }
 
   /* Owner */
@@ -2825,6 +3298,7 @@ header.navbar-container.scrolled .nav-logo h2 {
   .menu-modal-grid {
     grid-template-columns: 1fr;
   }
+
   .menu-modal-body {
     padding: 24px;
   }
@@ -2869,7 +3343,8 @@ header.navbar-container.scrolled .nav-logo h2 {
 }
 
 /* Cloche Animation: Lift Cover & Handle */
-.cloche-cover, .cloche-handle {
+.cloche-cover,
+.cloche-handle {
   animation: clocheLift 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
   transform-origin: bottom center;
 }
@@ -2880,9 +3355,12 @@ header.navbar-container.scrolled .nav-logo h2 {
 }
 
 @keyframes clocheLift {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-8px) rotate(-2deg);
   }
@@ -2914,13 +3392,16 @@ header.navbar-container.scrolled .nav-logo h2 {
     opacity: 0;
     transform: translateY(10px) scaleX(0.8);
   }
+
   30% {
     opacity: 0.6;
   }
+
   80% {
     stroke-dashoffset: 0;
     opacity: 0.3;
   }
+
   100% {
     stroke-dashoffset: -10;
     opacity: 0;
@@ -2956,6 +3437,7 @@ header.navbar-container.scrolled .nav-logo h2 {
     opacity: 0;
     transform: translateY(15px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
