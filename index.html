@@ -135,6 +135,9 @@
     .portal-card.tech::before {
       background: linear-gradient(90deg, #00f0ff, #a855f7);
     }
+    .portal-card.taste::before {
+      background: linear-gradient(90deg, #0F6A5B, #F26A3D);
+    }
 
     .portal-card:hover {
       transform: translateY(-8px);
@@ -178,6 +181,7 @@
     .gym .card-type { color: #c5f82a; }
     .cake .card-type { color: #d97d8b; }
     .tech .card-type { color: #00f0ff; }
+    .taste .card-type { color: #F26A3D; }
 
     .card-title {
       font-size: 1.65rem;
@@ -227,6 +231,12 @@
       background: linear-gradient(135deg, #00f0ff, #a855f7);
       color: #ffffff;
       border-color: transparent;
+    }
+
+    .portal-card.taste:hover .btn-launch {
+      background: #0F6A5B;
+      color: #ffffff;
+      border-color: #0F6A5B;
     }
 
     footer {
@@ -307,6 +317,22 @@
             <p class="card-desc">Interactive mobile accessories store. Features a 3D-style phone case customizer, categorized product collection grid, and a cart checkout system.</p>
           </div>
           <a href="tech-shop/index.html" class="btn-launch">
+            <span>Launch Site</span>
+            <i data-lucide="arrow-up-right" style="width: 16px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4: Tastes & More Restaurant -->
+      <div class="portal-card taste">
+        <div class="card-banner" style="background-image: url('taste-and-more/assets/images/maharaja_thali.jpg');"></div>
+        <div class="card-body">
+          <div>
+            <div class="card-type"><i data-lucide="utensils" style="width: 14px;"></i> Fine Dining Restaurant</div>
+            <h2 class="card-title">TASTES & MORE</h2>
+            <p class="card-desc">Premium pure vegetarian restaurant website with an editorial layout. Features a responsive menu, customer review engine, and reservation links.</p>
+          </div>
+          <a href="taste-and-more/index.html" class="btn-launch">
             <span>Launch Site</span>
             <i data-lucide="arrow-up-right" style="width: 16px;"></i>
           </a>

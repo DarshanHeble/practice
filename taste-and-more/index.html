@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tastes & More | Premium Pure Vegetarian Restaurant</title>
+  <meta name="description"
+    content="Experience luxury Indian vegetarian dining at Tastes & More. Serving premium breakfast, meals, curries, parathas, and artisanal drinks crafted with fresh ingredients.">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar-container">
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="nav-logo">
+        <!-- <div class="badge-veg-border" style="border-color: var(--accent-orange);">
+          <div style="width: 6px; height: 6px; background-color: var(--accent-orange); border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+        </div> -->
+        <h2>Tastes & More</h2>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#drinks">Drinks</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-sidebar-actions">
+          <a href="#contact" class="btn btn-outline">Reserve Table</a>
+          <a href="#menu" class="btn btn-primary">Order Now</a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-outline">Reserve Table</a>
+        <a href="#menu" class="btn btn-primary">Order Now</a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=100&auto=format&fit=crop"
+      alt="Leaf Pattern" class="deco-leaf deco-leaf-1">
+    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=100&auto=format&fit=crop"
+      alt="Leaf Pattern" class="deco-leaf deco-leaf-2">
+
+    <div class="container hero-grid">
+      <div class="hero-content animate-on-scroll delay-1">
+        <div class="badge-tag">100% Pure Vegetarian</div>
+        <h1>
+          <span>Fresh.</span>
+          <span>Authentic.</span>
+          <span class="highlight">Pure Vegetarian.</span>
+        </h1>
+        <p class="hero-desc">
+          Welcome to Tastes & More, where culinary heritage meets premium fine dining. Indulge in our carefully curated
+          pure vegetarian specialties, handcrafted everyday with fresh local ingredients and traditional spices.
+        </p>
+        <div class="hero-ctas">
+          <a href="#menu" class="btn btn-secondary">Explore Menu <i data-lucide="arrow-right"></i></a>
+          <a href="#contact" class="btn btn-primary">Order Online</a>
+        </div>
+      </div>
+
+      <div class="hero-collage animate-on-scroll delay-3">
+        <!-- Floating Badges -->
+        <div class="floating-badge badge-1">
+          <i data-lucide="shield-check" style="color: #10b981;"></i>
+          <span>100% Pure Veg</span>
+        </div>
+        <div class="floating-badge badge-2">
+          <i data-lucide="leaf" style="color: var(--accent-orange);"></i>
+          <span>Fresh Everyday</span>
+        </div>
+        <div class="floating-badge badge-3">
+          <i data-lucide="star" style="color: var(--accent-yellow); fill: var(--accent-yellow);"></i>
+          <span>Premium Quality</span>
+        </div>
+
+        <!-- Overlapping Images -->
+        <div class="collage-img collage-img-1">
+          <img src="assets/images/maharaja_thali.jpg" alt="Maharaja Thali Showcase">
+        </div>
+        <div class="collage-img collage-img-2">
+          <img src="assets/images/paneer_tikka.jpg" alt="Charred Paneer Tikka Sizzler">
+        </div>
+        <div class="collage-img collage-img-3">
+          <img src="assets/images/crispy_dosa.jpg" alt="Crispy Masala Dosa">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Today's Special -->
+  <section class="special" id="special">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <span class="section-subtitle">Today's Featured Creation</span>
+        <h2 class="section-title">Today's Special</h2>
+        <p class="section-desc">Experience a culinary masterpiece prepared exclusively by our Master Chef for today.</p>
+      </div>
+
+      <div class="special-card animate-on-scroll">
+        <div class="special-img-container">
+          <img src="assets/images/maharaja_thali.jpg" alt="Royal Maharaja Thali">
+        </div>
+        <div class="special-content">
+          <span class="special-tag">Chef's Signature</span>
+          <h3 class="special-title">The Royal Maharaja Thali</h3>
+          <p class="special-desc">
+            A majestic assortment of our finest creations, curated to offer a royal dining experience. Includes three
+            premium vegetable curries, our slow-cooked signature dal makhani, fragrant saffron basmati rice, hot
+            buttered parathas, crisp papad, house-made pickles, refreshing sweet raita, and an authentic dessert.
+          </p>
+          <div class="special-footer">
+            <span class="special-price">₹385</span>
+            <a href="#contact" class="btn btn-primary">Order Now <i data-lucide="shopping-bag"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=100&auto=format&fit=crop"
+      alt="Leaf Pattern" class="deco-leaf deco-leaf-3">
+
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <span class="section-subtitle">Taste Our Heritage</span>
+        <h2 class="section-title">Explore Our Menu</h2>
+        <p class="section-desc">From sizzling breakfasts to comforting parathas and savory street food, our menu
+          celebrates the diversity of pure vegetarian flavors.</p>
+      </div>
+
+      <!-- Categories Tabs -->
+      <ul class="menu-tabs animate-on-scroll">
+        <li><button class="tab-btn active" data-filter="breakfast">Breakfast</button></li>
+        <li><button class="tab-btn" data-filter="curries">Curries</button></li>
+        <li><button class="tab-btn" data-filter="meals">Meals</button></li>
+        <li><button class="tab-btn" data-filter="parathas">Parathas</button></li>
+        <li><button class="tab-btn" data-filter="chats">Chats</button></li>
+        <li><button class="tab-btn" data-filter="chinese">Chinese</button></li>
+        <li><button class="tab-btn" data-filter="drinks">Drinks</button></li>
+        <li><button class="tab-btn" data-filter="desserts">Desserts</button></li>
+      </ul>
+
+      <!-- Menu Grid / Layout -->
+      <div class="menu-grid animate-on-scroll delay-1">
+
+        <!-- Breakfast Cards -->
+        <div class="dish-card" data-category="breakfast" style="display: flex;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/crispy_dosa.jpg" alt="Classic Masala Dosa">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.9</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Classic Masala Dosa</h4>
+            </div>
+            <p class="dish-desc">Golden crispy rice crepe stuffed with spiced mashed potato bhaji, served with fresh
+              coconut chutney and hot sambar.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹120</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-category="breakfast" style="display: flex;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/maharaja_thali.jpg" alt="Paneer Paratha"
+              style="filter: brightness(0.9) contrast(1.1);">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.7</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Rava Onion Uttapam</h4>
+            </div>
+            <p class="dish-desc">Thick savory semolina griddle cakes topped with chopped onions, green chillies, and
+              fresh coriander.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹100</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-category="breakfast" style="display: flex;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/crispy_dosa.jpg" alt="Idli Sambar" style="filter: hue-rotate(10deg);">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.8</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Ghee Podi Idli</h4>
+            </div>
+            <p class="dish-desc">Soft, steamed rice cakes tossed in pure hot ghee and home-made spicy gunpowder podi
+              spice mix.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹95</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curries Cards (Initially Hidden) -->
+        <div class="dish-card" data-category="curries" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/paneer_tikka.jpg" alt="Paneer Tikka Masala">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.9</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Paneer Tikka Masala</h4>
+            </div>
+            <p class="dish-desc">Tandoor-charred cottage cheese cubes cooked in a rich, creamy, spiced tomato and bell
+              pepper onion gravy.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹280</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-category="curries" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/maharaja_thali.jpg" alt="Dal Makhani"
+              style="filter: grayscale(10%) contrast(1.15);">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.8</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Slow-Cooked Dal Makhani</h4>
+            </div>
+            <p class="dish-desc">Black lentils and red kidney beans slow-cooked overnight on charcoal with butter,
+              cream, and organic spices.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹220</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-category="curries" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/paneer_tikka.jpg" alt="Veg Diwani Handi" style="filter: hue-rotate(50deg);">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.6</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Veg Diwani Handi</h4>
+            </div>
+            <p class="dish-desc">Fresh seasonal vegetables and button mushrooms cooked in a rich green spinach and
+              cashew-nut gravy.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹240</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meals Cards (Initially Hidden) -->
+        <div class="dish-card" data-category="meals" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/maharaja_thali.jpg" alt="Royal Maharaja Thali">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.9</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">The Royal Maharaja Thali</h4>
+            </div>
+            <p class="dish-desc">A complete feast of three curries, dal makhani, raita, saffron rice, butter parathas,
+              papad, pickle, and sweets.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹385</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-category="meals" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/maharaja_thali.jpg" alt="Executive Veg Meal" style="filter: sepia(30%);">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.7</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Executive Lunch Thali</h4>
+            </div>
+            <p class="dish-desc">An elegant lunch combo featuring one paneer curry, dry vegetable, dal tadka, steamed
+              basmati rice, and two fresh rotis.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹220</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parathas Cards (Initially Hidden) -->
+        <div class="dish-card" data-category="parathas" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/aloo_paratha.jpg" alt="Butter Aloo Paratha">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.8</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Golden Butter Aloo Paratha</h4>
+            </div>
+            <p class="dish-desc">Whole wheat flatbread stuffed with savory mashed potatoes and roasted spices, topped
+              with melting butter.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹140</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-category="parathas" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/aloo_paratha.jpg" alt="Paneer Paratha"
+              style="filter: saturate(0.85) contrast(1.15);">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.9</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Spiced Paneer Paratha</h4>
+            </div>
+            <p class="dish-desc">Freshly kneaded flatbread stuffed with grated cottage cheese, green chillies, and fresh
+              chopped coriander.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹160</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chats Cards (Initially Hidden) -->
+        <div class="dish-card" data-category="chats" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/dahi_puri.jpg" alt="Royal Dahi Puri">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.9</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Royal Dahi Puri</h4>
+            </div>
+            <p class="dish-desc">Crispy puris stuffed with potato, green chutney, and tamarind chutney, drowned in sweet
+              chilled yogurt and sev.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹110</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-category="chats" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/dahi_puri.jpg" alt="Samosa Chaat" style="filter: hue-rotate(180deg);">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.7</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Deconstructed Samosa Chaat</h4>
+            </div>
+            <p class="dish-desc">Crushed golden vegetable samosas layered with hot chana masala curry, sweet yogurt,
+              chutneys, and coriander.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹100</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chinese Cards (Initially Hidden) -->
+        <div class="dish-card" data-category="chinese" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/paneer_tikka.jpg" alt="Schezwan Paneer"
+              style="filter: hue-rotate(120deg) saturate(1.2);">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.8</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Schezwan Paneer Sizzler</h4>
+            </div>
+            <p class="dish-desc">Crispy paneer cubes tossed in a spicy, garlic-rich home-made Schezwan chili sauce with
+              bell peppers and scallions.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹260</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-category="chinese" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/dahi_puri.jpg" alt="Veg Noodles"
+              style="filter: grayscale(80%) sepia(20%) brightness(0.95);">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.7</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Hakka Chili Noodles</h4>
+            </div>
+            <p class="dish-desc">Stir-fried noodles tossed with fresh shredded cabbage, carrots, bell peppers, soy
+              sauce, and green chili paste.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹190</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drinks Cards (Initially Hidden) -->
+        <div class="dish-card" data-category="drinks" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/mango_lassi.jpg" alt="Mango Lassi">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.9</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Royal Mango Lassi</h4>
+            </div>
+            <p class="dish-desc">Creamy blend of Alphonso mango pulp and thick sweet yogurt, topped with saffron, almond
+              flakes, and pistachios.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹95</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-category="drinks" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/mango_lassi.jpg" alt="Cold Coffee"
+              style="filter: sepia(80%) hue-rotate(330deg) brightness(0.85);">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.8</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Cold Coffee with Ice Cream</h4>
+            </div>
+            <p class="dish-desc">Thick, frothy milk blended with premium roasted espresso, topped with a rich scoop of
+              creamy vanilla ice cream.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹110</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desserts Cards (Initially Hidden) -->
+        <div class="dish-card" data-category="desserts" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/maharaja_thali.jpg" alt="Gulab Jamun"
+              style="filter: hue-rotate(240deg) saturate(1.4) brightness(0.9);">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.9</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Warm Gulab Jamun</h4>
+            </div>
+            <p class="dish-desc">Deep-fried milk dumplings soaked in a hot cardamom and rose water sugar syrup, served
+              with vanilla ice cream.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹90</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-category="desserts" style="display: none;">
+          <div class="dish-img-wrapper">
+            <img src="assets/images/paneer_tikka.jpg" alt="Sizzling Brownie"
+              style="filter: grayscale(100%) brightness(0.7) contrast(1.3);">
+            <div class="dish-badges">
+              <span class="badge-veg">Veg</span>
+            </div>
+            <div class="dish-rating">
+              <i data-lucide="star"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow); width: 12px; height: 12px;"></i>
+              <span>4.8</span>
+            </div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h4 class="dish-title">Sizzling Fudge Brownie</h4>
+            </div>
+            <p class="dish-desc">A rich chocolate brownie served on a hot sizzling cast-iron skillet, smothered with
+              warm hot fudge sauce and vanilla ice cream.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹160</span>
+              <button class="btn-icon-sm" aria-label="Order Dish"><i data-lucide="plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <span class="section-subtitle">Our Quality Promise</span>
+        <h2 class="section-title">Why Choose Tastes & More?</h2>
+        <p class="section-desc">We go beyond simple dining to deliver a standard of trust, hygiene, and authenticity
+          that is hard to find.</p>
+      </div>
+
+      <div class="features-grid animate-on-scroll delay-1">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="shield-check" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3 class="feature-title">100% Pure Vegetarian</h3>
+          <p class="feature-desc">We operate an exclusively vegetarian kitchen, ensuring absolute purity, zero
+            contamination, and complete peace of mind.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="leaf" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3 class="feature-title">Fresh Ingredients</h3>
+          <p class="feature-desc">Our farm-to-table vegetables, custom-milled flours, and fresh herbs are sourced every
+            morning for premium quality.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="sparkles" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3 class="feature-title">Hygienic Kitchen</h3>
+          <p class="feature-desc">We follow strict sanitation protocols, filtered water systems, and regular health
+            audits to guarantee spotless cleanliness.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="heart" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3 class="feature-title">Homemade Taste</h3>
+          <p class="feature-desc">Our recipes are passed down through generations, utilizing slow-cooking methods to
+            recreate the comfort of a home kitchen.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="indian-rupee" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3 class="feature-title">Affordable Luxury</h3>
+          <p class="feature-desc">Experience royal dining presentation, gourmet flavors, and generous portions at prices
+            that offer exceptional value.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="zap" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3 class="feature-title">Express Service</h3>
+          <p class="feature-desc">Whether dining in or ordering to your home, our optimized workflow ensures your meals
+            arrive steaming hot and fresh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Tastes & More Section -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-images animate-on-scroll">
+        <div class="about-img-main">
+          <img src="assets/images/maharaja_thali.jpg" alt="Luxury Thali Layout">
+        </div>
+        <div class="about-img-sub">
+          <img src="assets/images/crispy_dosa.jpg" alt="Dosa Preparation">
+        </div>
+      </div>
+
+      <div class="about-content animate-on-scroll delay-2">
+        <span class="section-subtitle">Our Heritage</span>
+        <h2>Crafting Pure Vegetarian Legacies Since 2012</h2>
+        <p class="about-desc-highlight">"Vegetarianism is not a lack of choices; it is the art of celebrating nature's
+          endless flavor canvas."</p>
+        <p class="about-text">
+          Tastes & More was born out of a simple passion: to elevate traditional Indian vegetarian food to a premium
+          dining experience. We felt that vegetarians deserved a space that combined absolute culinary authenticity with
+          luxury aesthetics, warm hospitality, and generous portions.
+        </p>
+        <p class="about-text" style="margin-bottom: 40px;">
+          For over a decade, we have remained committed to this standard. We grind our own spice blends daily, churn our
+          own butter, source organic produce, and refuse to use chemical additives, artificial colors, or MSG. Every
+          plate we serve represents our dedication to your health and taste.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <h3>14+</h3>
+            <p>Years of Legacy</p>
+          </div>
+          <div class="stat-item">
+            <h3>45+</h3>
+            <p>Signature Dishes</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Pure Vegetarian</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Owners Section -->
+  <section class="owner-section" id="owner">
+    <div class="container">
+      <div class="text-center animate-on-scroll" style="margin-bottom: 50px;">
+        <span class="section-subtitle">Hearts Behind the Brand</span>
+        <h2 class="section-title">Meet the Owners</h2>
+        <p class="section-desc">The culinary visionaries and founders who bring the authentic tastes of heritage to your table.</p>
+      </div>
+
+      <div class="owners-grid">
+        <!-- Owner 1 Card -->
+        <div class="owner-card animate-on-scroll">
+          <div class="owner-img-wrapper">
+            <img src="assets/owners/owner1.png" alt="Chef Harish Kumar, Co-Founder & Executive Chef">
+          </div>
+          <div class="owner-content">
+            <blockquote class="owner-quote">
+              "Food prepared with respect, cleanliness, and love is food that heals. At Tastes & More, our kitchen is an extension of our home."
+            </blockquote>
+            <p class="owner-message">
+              As a culinary enthusiast and restaurateur with over 25 years of experience in traditional Indian cooking, Chef Harish co-founded Tastes & More to elevate pure vegetarian dining. He wanted a restaurant where families could dine in an elegant, modern environment, confident in the absolute hygiene and pure heritage of their food.
+            </p>
+            <div class="owner-info">
+              <div class="owner-signature">
+                <h4>Chef Harish Kumar</h4>
+                <p>Co-Founder & Executive Chef</p>
+              </div>
+              <span class="owner-badge">Serving Since 2012</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Owner 2 Card -->
+        <div class="owner-card animate-on-scroll">
+          <div class="owner-img-wrapper">
+            <img src="assets/owners/owner2.png" alt="Chef Rajesh Kumar, Co-Founder & Head of Operations">
+          </div>
+          <div class="owner-content">
+            <blockquote class="owner-quote">
+              "Modern presentation must never compromise the authentic heritage of taste. We cook with absolute devotion."
+            </blockquote>
+            <p class="owner-message">
+              Bringing an innovative flair to traditional recipes, Chef Rajesh ensures every guest experiences the perfect harmony of taste, texture, and visual design. His dedication to fresh sourcing and standardizing hygiene procedures ensures a consistently premium experience.
+            </p>
+            <div class="owner-info">
+              <div class="owner-signature">
+                <h4>Chef Rajesh Kumar</h4>
+                <p>Co-Founder & Head of Operations</p>
+              </div>
+              <span class="owner-badge">Serving Since 2012</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drinks Showcase Section -->
+  <section class="drinks" id="drinks">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <span class="section-subtitle">Artisanal Sips</span>
+        <h2 class="section-title">Signature Drinks Showcase</h2>
+        <p class="section-desc">Quench your thirst with our hand-pressed fruit juices, creamy slow-churned lassis, and
+          rich milkshakes.</p>
+      </div>
+
+      <div class="drinks-grid animate-on-scroll delay-1">
+        <div class="drink-card">
+          <div class="drink-img-wrapper">
+            <img src="assets/images/mango_lassi.jpg" alt="Creamy Mango Lassi">
+          </div>
+          <div class="drink-body">
+            <h3 class="drink-title">Royal Mango Lassi</h3>
+            <p class="drink-desc">Thick, velvety yogurt drink blended with hand-picked organic mangoes, garnished with
+              saffron strands and pistachios.</p>
+            <span class="drink-price">₹95</span>
+            <a href="#contact" class="btn btn-primary btn-white">Order Now</a>
+          </div>
+        </div>
+
+        <div class="drink-card">
+          <div class="drink-img-wrapper">
+            <img src="assets/images/mango_lassi.jpg" alt="Rose Cardamom Lassi"
+              style="filter: hue-rotate(120deg) saturate(1.4);">
+          </div>
+          <div class="drink-body">
+            <h3 class="drink-title">Rose Cardamom Lassi</h3>
+            <p class="drink-desc">Traditional sweet Punjabi lassi infused with natural organic rose syrup and freshly
+              ground cardamom powder.</p>
+            <span class="drink-price">₹90</span>
+            <a href="#contact" class="btn btn-primary btn-white">Order Now</a>
+          </div>
+        </div>
+
+        <div class="drink-card">
+          <div class="drink-img-wrapper">
+            <img src="assets/images/mango_lassi.jpg" alt="Kesar Pista Milkshake" style="filter: hue-rotate(50deg);">
+          </div>
+          <div class="drink-body">
+            <h3 class="drink-title">Kesar Pista Milkshake</h3>
+            <p class="drink-desc">Creamy whole milk shake blended with premium Kashmiri saffron, crushed pistachios, and
+              almond extract.</p>
+            <span class="drink-price">₹120</span>
+            <a href="#contact" class="btn btn-primary btn-white">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banta Fizz Showcase Section -->
+  <section class="banta-section" id="banta">
+    <!-- Animated fizz bubbles background -->
+    <div class="fizz-bubbles">
+      <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+      <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+      <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+      <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+      <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+      <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+      <span class="bubble"></span><span class="bubble"></span>
+    </div>
+
+    <div class="container banta-layout">
+      <!-- Left: Text Content -->
+      <div class="banta-content animate-on-scroll">
+        <span class="banta-tag">🧊 Ice Cold & Refreshing</span>
+        <h2 class="banta-title">Banta Goli Soda</h2>
+        <p class="banta-subtitle">Your New Pop!!</p>
+        <p class="banta-desc">
+          Experience the iconic Indian marble soda — fizzy, ice-cold, and bursting with blueberry flavor. 
+          A nostalgic street-side classic served premium style at Tastes & More.
+        </p>
+        <div class="banta-features">
+          <div class="banta-feature"><span>🫧</span> Fizzy Fresh</div>
+          <div class="banta-feature"><span>🧊</span> Ice Cold</div>
+          <div class="banta-feature"><span>🍬</span> No Sugar</div>
+          <div class="banta-feature"><span>💧</span> 200ml</div>
+        </div>
+        <div class="banta-price-row">
+          <span class="banta-price">₹40</span>
+          <a href="#contact" class="btn btn-primary banta-cta">Order Now <i data-lucide="zap"></i></a>
+        </div>
+      </div>
+
+      <!-- Right: Crazy Animated Bottle -->
+      <div class="banta-stage animate-on-scroll delay-2">
+        <!-- Shadow on surface -->
+        <div class="banta-shadow"></div>
+        <!-- Main bottle -->
+        <div class="banta-bottle-wrapper">
+          <img src="assets/images/banta.png" alt="Fizzies Goli Soda Banta Bottle" class="banta-bottle-main">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <span class="section-subtitle">Visual Feast</span>
+        <h2 class="section-title">Our Visual Gallery</h2>
+        <p class="section-desc">A glimpse into our signature dishes, elegant restaurant interiors, and the vibrant
+          atmosphere of Tastes & More.</p>
+      </div>
+
+      <div class="gallery-grid animate-on-scroll delay-1">
+        <div class="gallery-item gallery-item-wide">
+          <img src="assets/images/crispy_dosa.jpg" alt="Masala Dosa Presentation">
+          <div class="gallery-overlay">
+            <h4>Traditional Dosa</h4>
+            <p>Breakfast Signature</p>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item-tall">
+          <img src="assets/images/paneer_tikka.jpg" alt="Gourmet Paneer Tikka">
+          <div class="gallery-overlay">
+            <h4>Paneer Tikka</h4>
+            <p>Clay-Charred Classics</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/aloo_paratha.jpg" alt="Golden Paratha Served Hot">
+          <div class="gallery-overlay">
+            <h4>Aloo Paratha</h4>
+            <p>Home-Style Flatbread</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/mango_lassi.jpg" alt="Traditional Clay Pot Mango Lassi">
+          <div class="gallery-overlay">
+            <h4>Mango Lassi</h4>
+            <p>Artisanal Drinks</p>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item-wide">
+          <img src="assets/images/maharaja_thali.jpg" alt="Maharaja Thali Banquet Feast">
+          <div class="gallery-overlay">
+            <h4>Royal Feast</h4>
+            <p>Chef's Maharaja Thali</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/dahi_puri.jpg" alt="Spiced Chaat Plate">
+          <div class="gallery-overlay">
+            <h4>Dahi Puri Platter</h4>
+            <p>Vibrant Indian Chaat</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/crispy_dosa.jpg" alt="Crispy Masala Dosa">
+          <div class="gallery-overlay">
+            <h4>Masala Dosa</h4>
+            <p>South Indian Specialty</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <span class="section-subtitle">Loved By Guests</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-desc">Read reviews from our verified guests who have dined with us and experienced the Taste &
+          More standard.</p>
+      </div>
+
+      <div class="reviews-carousel-container animate-on-scroll">
+        <button class="carousel-btn carousel-btn-prev" aria-label="Previous Slide"><i
+            data-lucide="chevron-left"></i></button>
+        <button class="carousel-btn carousel-btn-next" aria-label="Next Slide"><i
+            data-lucide="chevron-right"></i></button>
+
+        <div class="reviews-carousel">
+          <div class="review-slide active">
+            <div class="review-card">
+              <span class="quote-icon">“</span>
+              <div class="review-stars">
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+              </div>
+              <p class="review-text">"The Maharaja Thali here is a work of culinary art. The flavors of each curry are
+                balanced, authentic, and not overly spicy. The staff is exceptionally polite, and the cream/green decor
+                feels so premium. Highly recommended!"</p>
+              <div class="review-author">Siddharth Mehta</div>
+              <div class="review-author-title">Verified Guest, Bengaluru</div>
+            </div>
+          </div>
+
+          <div class="review-slide">
+            <div class="review-card">
+              <span class="quote-icon">“</span>
+              <div class="review-stars">
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+              </div>
+              <p class="review-text">"I love their Dahi Puri. It has a burst of textures—cold sweet yogurt, spicy mint
+                water, crisp shells, and fresh pomegranate. We also tried the Mango Lassi, which was thick and served in
+                clay pots. Beautiful presentation!"</p>
+              <div class="review-author">Priya Sharma</div>
+              <div class="review-author-title">Food Blogger, Bengaluru</div>
+            </div>
+          </div>
+
+          <div class="review-slide">
+            <div class="review-card">
+              <span class="quote-icon">“</span>
+              <div class="review-stars">
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+                <i data-lucide="star" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+              </div>
+              <p class="review-text">"As a pure vegetarian, finding a luxury dining spot that understands food safety
+                and purity is a relief. The kitchen view is so clean, and Chef Harish actually stopped by our table to
+                ask for feedback. Amazing experience!"</p>
+              <div class="review-author">Aarav Kapoor</div>
+              <div class="review-author-title">Regular Guest</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review Form Section -->
+  <section class="review-form-section" id="write-review">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <span class="section-subtitle">Share Your Voice</span>
+        <h2 class="section-title">Leave a Review</h2>
+        <p class="section-desc">Your feedback drives our kitchen. Share your dining experience with us.</p>
+      </div>
+
+      <div class="form-container animate-on-scroll">
+        <form id="restaurant-review-form">
+          <div class="form-group">
+            <label class="form-label" for="review-name">Your Full Name</label>
+            <input type="text" id="review-name" class="form-control" placeholder="E.g., Rajesh Patel" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Your Rating</label>
+            <div class="star-rating-input" id="star-rating">
+              <i data-lucide="star" data-value="1" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+              <i data-lucide="star" data-value="2" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+              <i data-lucide="star" data-value="3" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+              <i data-lucide="star" data-value="4" style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+              <i data-lucide="star" data-value="5" class="active"
+                style="fill: var(--accent-yellow); color: var(--accent-yellow);"></i>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="review-text">Your Dining Experience</label>
+            <textarea id="review-text" class="form-control" rows="4"
+              placeholder="Describe the dishes, ambiance, service..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-secondary" style="width: 100%;">Submit Review</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <span class="section-subtitle">Join Us Today</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-desc">Have a question, catering request, or want to book a table for a special family dinner?
+          Reach out to us.</p>
+      </div>
+
+      <div class="contact-grid animate-on-scroll">
+        <!-- Contact Info -->
+        <div class="contact-info-card">
+          <h3>Contact Details</h3>
+
+          <div class="info-item">
+            <div class="info-icon"><i data-lucide="phone"></i></div>
+            <div class="info-text">
+              <h4>Call Us Directly</h4>
+              <p>+91 98765 43210<br>+91 80 2345 6789</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i data-lucide="mail"></i></div>
+            <div class="info-text">
+              <h4>Email Enquiries</h4>
+              <p>reservations@tasteandmore.com<br>info@tasteandmore.com</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i data-lucide="map-pin"></i></div>
+            <div class="info-text">
+              <h4>Find Our Restaurant</h4>
+              <p>12, Palace Road, Vasanth Nagar,<br>Bengaluru, Karnataka 560052</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i data-lucide="clock"></i></div>
+            <div class="info-text">
+              <h4>Working Hours</h4>
+              <p>Monday - Sunday<br>Breakfast: 8:00 AM - 11:30 AM<br>Lunch & Dinner: 12:00 PM - 11:00 PM</p>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <h3>Send Message</h3>
+          <form id="restaurant-contact-form">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="E.g., Anjali Hegde" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-phone">Phone Number</label>
+              <input type="tel" id="contact-phone" class="form-control" placeholder="E.g., +91 98765 43210" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="E.g., anjali@domain.com"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Special Message / Query</label>
+              <textarea id="contact-message" class="form-control" rows="4"
+                placeholder="How can we assist you? Include details if requesting catering..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map Section -->
+  <div class="map-section animate-on-scroll">
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6740685934375!2d77.5898863!3d12.9926868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16629910d65b%3A0xe54d24177d544ff0!2sPalace%20Rd%2C%20Vasanth%20Nagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+        width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Tastes & More Location Map"></iframe>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <a href="#home" class="nav-logo" style="margin-bottom: 20px;">
+            <!-- <div class="badge-veg-border" style="border-color: var(--accent-yellow);">
+              <div
+                style="width: 6px; height: 6px; background-color: var(--accent-yellow); border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+              </div>
+            </div> -->
+            <h2 style="color: var(--accent-yellow);">Tastes & More</h2>
+          </a>
+          <p>Experiencing pure vegetarian heritage with fine dining elegance. Slow-churned, freshly prepared gourmet
+            dishes that nourish the soul.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#drinks">Artisanal Drinks</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-hours">
+          <h4>Working Hours</h4>
+          <p><span>Breakfast</span>Mon - Sun: 8:00 AM - 11:30 AM</p>
+          <p><span>Lunch & Dinner</span>Mon - Sun: 12:00 PM - 11:00 PM</p>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h4>Contact Info</h4>
+          <p><i data-lucide="phone" style="width: 16px; height: 16px;"></i> +91 98765 43210</p>
+          <p><i data-lucide="mail" style="width: 16px; height: 16px;"></i> info@tasteandmore.com</p>
+          <p><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i> 12, Palace Road, Vasanth Nagar, Bengaluru,
+            KA 560052</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tastes & More Premium Pure Vegetarian Restaurant. All rights reserved.</p>
+        <p>Designed with High-End Editorial Style & Smooth Responsive UX.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Buttons & Widgets -->
+  <div class="floating-widgets-container">
+    <!-- FAQ Bot Floating Button -->
+    <button class="floating-widget-btn faq-bot-btn" id="faqBotBtn" aria-label="Open FAQ Chatbot">
+      <i data-lucide="help-circle"></i>
+      <span class="widget-tooltip">Ask FAQ Bot</span>
+    </button>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210?text=Hi!%20I'd%20like%20to%20reserve%20a%20table%20or%20place%20an%20order%20at%20Tastes%20%26%20More." 
+       target="_blank" 
+       class="floating-widget-btn whatsapp-btn" 
+       aria-label="Chat on WhatsApp">
+      <i data-lucide="message-circle"></i>
+      <span class="widget-tooltip">WhatsApp Chat</span>
+    </a>
+  </div>
+
+  <!-- FAQ Bot Chat Window -->
+  <div class="faq-chat-window" id="faqChatWindow">
+    <div class="faq-chat-header">
+      <div class="faq-chat-header-info">
+        <div class="faq-avatar">🤖</div>
+        <div>
+          <h4>Tastes & More Assistant</h4>
+          <p>Online • Instant Answers</p>
+        </div>
+      </div>
+      <button class="faq-chat-close" id="closeFaqChat">&times;</button>
+    </div>
+    
+    <div class="faq-chat-body" id="faqChatBody">
+      <div class="chat-message bot-message">
+        <p>Namaste! 🙏 Welcome to Tastes & More. How can I help you today?</p>
+      </div>
+      
+      <div class="faq-quick-chips">
+        <button class="faq-chip" data-question="veg">Is it 100% vegetarian?</button>
+        <button class="faq-chip" data-question="timings">What are your timings?</button>
+        <button class="faq-chip" data-question="delivery">Do you deliver?</button>
+        <button class="faq-chip" data-question="reserve">How to reserve a table?</button>
+        <button class="faq-chip" data-question="location">Where are you located?</button>
+      </div>
+    </div>
+
+    <div class="faq-chat-footer">
+      <input type="text" id="faqUserInput" placeholder="Type a message..." aria-label="Type your message here">
+      <button id="sendFaqMsg" aria-label="Send Message"><i data-lucide="send"></i></button>
+    </div>
+  </div>
+
+  <!-- Lightbox Script & Main Controller -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
