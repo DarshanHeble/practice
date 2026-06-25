@@ -2366,6 +2366,12 @@ header.navbar-container.scrolled .nav-logo h2 {
   transition: var(--transition-fast);
 }
 
+.social-icon-btn i,
+.social-icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
 .social-icon-btn:hover {
   background-color: var(--accent-yellow);
   color: var(--primary-green);
