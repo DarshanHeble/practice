@@ -591,9 +591,9 @@ header.navbar-container.scrolled .nav-logo h2 {
 }
 
 .special-price {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--primary-green);
 }
 
@@ -744,9 +744,9 @@ header.navbar-container.scrolled .nav-logo h2 {
 }
 
 .dish-price {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 500;
   color: var(--primary-green);
 }
 
@@ -830,9 +830,9 @@ header.navbar-container.scrolled .nav-logo h2 {
 }
 
 .drink-price {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 500;
   color: var(--primary-green);
   margin-bottom: 15px;
   display: block;
@@ -938,24 +938,25 @@ header.navbar-container.scrolled .nav-logo h2 {
 }
 
 .banta-price {
-  font-family: var(--font-heading);
-  font-size: 3rem;
-  font-weight: 700;
-  color: #38bdf8;
-  text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+  font-family: var(--font-body);
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--accent-orange);
+  text-shadow: 0 0 25px rgba(242, 106, 61, 0.35);
 }
 
 .banta-cta {
-  background: linear-gradient(135deg, #38bdf8, #0ea5e9) !important;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-hover)) !important;
   border: none !important;
-  box-shadow: 0 5px 20px rgba(56, 189, 248, 0.35);
+  box-shadow: 0 5px 20px rgba(242, 106, 61, 0.35);
   font-size: 1rem;
+  color: var(--white) !important;
 }
 
 .banta-cta:hover {
-  background: linear-gradient(135deg, #0ea5e9, #0284c7) !important;
+  background: linear-gradient(135deg, var(--accent-orange-hover), #d94c25) !important;
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(56, 189, 248, 0.5);
+  box-shadow: 0 8px 30px rgba(242, 106, 61, 0.5);
 }
 
 /* --- Bottle Stage & Toast Animation Sequence --- */
@@ -1161,11 +1162,22 @@ header.navbar-container.scrolled .nav-logo h2 {
   transition: transform 1s cubic-bezier(0.6, -0.28, 0.735, 0.045), opacity 0.8s ease;
 }
 
+.banta-section.toast-settled .banta-bottle-left {
+  display: none !important;
+}
+
 .banta-section.toast-settling .banta-bottle-wrapper {
-  transform: translate(-90px, 0px) rotate(0deg);
-  /* Settling position */
+  animation: heroBottleSettle 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   margin-left: 0;
-  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes heroBottleSettle {
+  0% {
+    transform: translate(-75px, -40px) rotate(16deg);
+  }
+  100% {
+    transform: translate(-90px, 0px) rotate(0deg);
+  }
 }
 
 /* Phase 5: Continuous Idle Float state */
@@ -1203,6 +1215,88 @@ header.navbar-container.scrolled .nav-logo h2 {
     transform: translateX(-50%) scaleX(1.2);
     opacity: 0.4;
   }
+}
+
+/* Backlight glow behind portal */
+.banta-backlight {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.16) 0%, rgba(56, 189, 248, 0.03) 50%, transparent 70%);
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease;
+}
+
+.banta-section.toast-settled .banta-backlight {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Floating 3D Depth Elements */
+.banta-deco {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 1s ease 1.2s, transform 1s cubic-bezier(0.16, 1, 0.3, 1) 1.2s;
+}
+
+.banta-section.toast-settled .banta-deco {
+  opacity: 0.85;
+  transform: scale(1);
+}
+
+.banta-deco-blueberry {
+  width: 60px;
+  height: 60px;
+  top: 15%;
+  left: 8%;
+  z-index: 6; /* Foreground, in front of bottle */
+  filter: blur(1px) brightness(0.8) contrast(1.1);
+  animation: bantaDecoFloat1 5s ease-in-out infinite alternate;
+}
+
+.banta-deco-mint {
+  width: 80px;
+  height: 80px;
+  bottom: 12%;
+  right: 5%;
+  z-index: 2; /* Background, behind bottle & portal */
+  filter: blur(2px) brightness(0.9);
+  animation: bantaDecoFloat2 7s ease-in-out infinite alternate;
+}
+
+.banta-deco-ice {
+  width: 70px;
+  height: 70px;
+  top: 22%;
+  right: 8%;
+  z-index: 2; /* Background */
+  filter: blur(1.5px) brightness(1.1) opacity(0.8);
+  animation: bantaDecoFloat3 6s ease-in-out infinite alternate;
+}
+
+@keyframes bantaDecoFloat1 {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  100% { transform: translateY(-15px) rotate(15deg) scale(1.05); }
+}
+
+@keyframes bantaDecoFloat2 {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  100% { transform: translateY(18px) rotate(-20deg) scale(0.95); }
+}
+
+@keyframes bantaDecoFloat3 {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  100% { transform: translateY(-12px) rotate(10deg) scale(1.02); }
 }
 
 /* Clink Blue Flash Effect */
@@ -3064,7 +3158,16 @@ header.navbar-container.scrolled .nav-logo h2 {
   }
 
   .banta-section.toast-settling .banta-bottle-wrapper {
-    transform: translate(-65px, 0px) rotate(0deg);
+    animation: heroBottleSettleMobile 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+
+  @keyframes heroBottleSettleMobile {
+    0% {
+      transform: translate(-45px, -20px) rotate(16deg);
+    }
+    100% {
+      transform: translate(-65px, 0px) rotate(0deg);
+    }
   }
 
   .banta-section.toast-settled .banta-bottle-wrapper {
@@ -3105,6 +3208,32 @@ header.navbar-container.scrolled .nav-logo h2 {
     height: 60px;
     margin-left: -30px;
     top: 40%;
+  }
+
+  .banta-backlight {
+    width: 320px;
+    height: 320px;
+  }
+
+  .banta-deco-blueberry {
+    width: 40px;
+    height: 40px;
+    left: 2%;
+    top: 20%;
+  }
+
+  .banta-deco-mint {
+    width: 50px;
+    height: 50px;
+    right: 2%;
+    bottom: 15%;
+  }
+
+  .banta-deco-ice {
+    width: 45px;
+    height: 45px;
+    right: 5%;
+    top: 25%;
   }
 
   /* Owner */
