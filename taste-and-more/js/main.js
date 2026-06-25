@@ -524,7 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
           // Phase 3 & 4: Settle right bottle, fade left bottle, portal reveal (1.6s)
           setTimeout(() => {
-            bantaSection.classList.remove('toast-active');
+            bantaSection.classList.remove('toast-active', 'toast-impacted');
             bantaSection.classList.add('toast-settling');
           }, 1600);
           

@@ -1020,7 +1020,7 @@ header.navbar-container.scrolled .nav-logo h2 {
   background: radial-gradient(circle at 35% 35%, rgba(147, 197, 253, 0.9) 0%, rgba(59, 130, 246, 0.95) 50%, rgba(30, 58, 138, 1) 100%);
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(56, 189, 248, 0.8), inset 0 0 4px rgba(255, 255, 255, 0.8);
-  top: 75px;
+  top: 90px;
   /* High position initially */
   z-index: 6;
   left: 50%;
@@ -1040,7 +1040,7 @@ header.navbar-container.scrolled .nav-logo h2 {
 
 /* Fall Goli Bead after impact */
 .banta-section.toast-impacted .goli-bead {
-  top: 175px;
+  top: 210px;
   /* Drops down to chamber */
 }
 
@@ -1048,18 +1048,18 @@ header.navbar-container.scrolled .nav-logo h2 {
 .banta-bottle-left {
   position: absolute;
   z-index: 4;
-  width: 180px;
-  height: 420px;
-  bottom: 60px;
+  width: 220px;
+  height: 490px;
+  bottom: 30px;
   left: 50%;
-  margin-left: -240px;
+  margin-left: -260px;
   transform: translate(-300px, 450px) rotate(-45deg);
   opacity: 0;
   transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1), opacity 0.5s ease;
 }
 
 .banta-bottle-img-left {
-  height: 420px;
+  height: 490px;
   width: auto;
   filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
   transform: scaleX(-1);
@@ -1070,18 +1070,18 @@ header.navbar-container.scrolled .nav-logo h2 {
 .banta-bottle-wrapper {
   position: absolute;
   z-index: 5;
-  width: 180px;
-  height: 420px;
-  bottom: 60px;
+  width: 220px;
+  height: 490px;
+  bottom: 30px;
   left: 50%;
-  margin-left: 60px;
+  margin-left: 40px;
   transform: translate(300px, 450px) rotate(45deg);
   opacity: 0;
   transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1), opacity 0.5s ease;
 }
 
 .banta-bottle-main {
-  height: 460px;
+  height: 530px;
   width: auto;
   position: absolute;
   bottom: -20px;
@@ -1347,28 +1347,28 @@ header.navbar-container.scrolled .nav-logo h2 {
 .banta-section.toast-settled .banta-content .banta-tag {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.2s;
+  transition-delay: 0s;
 }
 
 .banta-section.toast-settling .banta-content .banta-title,
 .banta-section.toast-settled .banta-content .banta-title {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.4s;
+  transition-delay: 0.1s;
 }
 
 .banta-section.toast-settling .banta-content .banta-subtitle,
 .banta-section.toast-settled .banta-content .banta-subtitle {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.6s;
+  transition-delay: 0.2s;
 }
 
 .banta-section.toast-settling .banta-content .banta-desc,
 .banta-section.toast-settled .banta-content .banta-desc {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.8s;
+  transition-delay: 0.3s;
 }
 
 .banta-section.toast-settling .banta-content .banta-features .banta-feature,
@@ -1379,29 +1379,29 @@ header.navbar-container.scrolled .nav-logo h2 {
 
 .banta-section.toast-settling .banta-content .banta-features .banta-feature:nth-child(1),
 .banta-section.toast-settled .banta-content .banta-features .banta-feature:nth-child(1) {
-  transition-delay: 1.0s;
+  transition-delay: 0.4s;
 }
 
 .banta-section.toast-settling .banta-content .banta-features .banta-feature:nth-child(2),
 .banta-section.toast-settled .banta-content .banta-features .banta-feature:nth-child(2) {
-  transition-delay: 1.15s;
+  transition-delay: 0.5s;
 }
 
 .banta-section.toast-settling .banta-content .banta-features .banta-feature:nth-child(3),
 .banta-section.toast-settled .banta-content .banta-features .banta-feature:nth-child(3) {
-  transition-delay: 1.3s;
+  transition-delay: 0.6s;
 }
 
 .banta-section.toast-settling .banta-content .banta-features .banta-feature:nth-child(4),
 .banta-section.toast-settled .banta-content .banta-features .banta-feature:nth-child(4) {
-  transition-delay: 1.45s;
+  transition-delay: 0.7s;
 }
 
 .banta-section.toast-settling .banta-content .banta-price-row,
 .banta-section.toast-settled .banta-content .banta-price-row {
   opacity: 1;
   transform: scale(1);
-  transition-delay: 1.6s;
+  transition-delay: 0.8s;
 }
 
 /* --- Fizzing Bubbles --- */
